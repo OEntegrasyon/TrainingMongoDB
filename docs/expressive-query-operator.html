@@ -197,8 +197,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="http://ozgurentegrasyon.com" target="blank" class="gitbook-link">
+            Özgür Entegrasyon
         </a>
     </li>
 </ul>
@@ -270,7 +270,7 @@
 <p>sample_training veritaban&#x131;n&#x131;n trips collection dan bir document; &quot;$end station id&quot; ve &quot;$start station id&quot; nin e&#x15F;it oldu&#x11F;u de&#x11F;erleri getirelim.</p>
 <pre><code class="lang-text">{ &quot;$expr&quot;: { &quot;$eq&quot;: [ &quot;$end station id&quot;, &quot;$start station id&quot;] }}
 </code></pre>
-<p><img src=".gitbook/assets/trips.png" alt=""></p>
+<p><img src="img/assets/trips.png" alt=""></p>
 <p>Yolculu&#x11F;un 1200 saniyeden uzun s&#xFC;rd&#xFC;&#x11F;&#xFC; ve ayn&#x131; istasyonda ba&#x15F;lay&#x131;p bitti&#x11F;i t&#xFC;m belgeleri bulal&#x131;m:</p>
 <pre><code class="lang-text">db.trips.find({ &quot;$expr&quot;: { &quot;$and&quot;: [ { &quot;$gt&quot;: [ &quot;$tripduration&quot;, 1200 ]},
                          { &quot;$eq&quot;: [ &quot;$end station id&quot;, &quot;$start station id&quot; ]}
