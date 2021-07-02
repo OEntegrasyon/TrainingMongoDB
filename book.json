@@ -4,7 +4,8 @@
 				"rss",
 				"yametrika",
 				"gtm",
-				"canonical-link"			
+				"canonical-link",
+				"github-embed"			
 				],
 	"pluginsConfig": {
 		"ga": {
@@ -42,7 +43,6 @@
 		"canonical-link": {
 			"baseURL": "https://oentegrasyon.github.io/TrainingMongoDB/"
 		  }
-
 		
 	}
 }
