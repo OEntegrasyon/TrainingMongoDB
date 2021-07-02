@@ -15,19 +15,19 @@ description: ozgurentegrasyon.com
 
 #### **Disk**
 
-![](img/assets/disk.png)
+![Disk Ayarları](img/assets/disk.png)
 
 #### Network
 
-![](img/assets/network.png)
+![NetworkAyarları](img/assets/network.png)
 
 #### Settings
 
-![](img/assets/settings.png)
+![Genel Ayarlar](img/assets/settings.png)
 
 #### Finished
 
-![](img/assets/finished.png)
+![Kurlumun Tamamlanması](img/assets/finished.png)
 
 ### Keyboard & SSH &  Repo  & FireWall Ayarları
 
@@ -173,7 +173,7 @@ mongod --config /etc/mongod.conf
 
 ![main page](img/assets/compass.png)
 
-![](img/assets/compass2.png)
+![compass-2](img/assets/compass2.png)
 
-![](img/assets/compass3.png)
+![compass-3](img/assets/compass3.png)
 

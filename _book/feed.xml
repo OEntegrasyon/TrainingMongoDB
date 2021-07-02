@@ -4,7 +4,7 @@
         <description><![CDATA[MongoDB Training Documents]]></description>
         <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 02 Jul 2021 12:12:37 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 02 Jul 2021 12:20:32 GMT</lastBuildDate>
         <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Özgür Mersin]]></author>
         <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
@@ -14,6 +14,7 @@
         <category><![CDATA[Training]]></category>
         <item>
             <title><![CDATA[Mongo Training]]></title>
+            <description><![CDATA[Disk Ayarları]]></description>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
