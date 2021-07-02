@@ -1,4 +1,5 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: Sorgu operatörlerini kullanarak hızlı çözümler
 ---
 

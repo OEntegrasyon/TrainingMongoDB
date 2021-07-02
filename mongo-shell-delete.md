@@ -1,4 +1,5 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: delete & deleteMany & drop
 ---
 
@@ -6,9 +7,9 @@ description: delete & deleteMany & drop
 
 Belge silme, hem güncelleme hem de sorgulama işlemleriyle ortak özelliklere sahiptir.
 
-![](.gitbook/assets/ekran-goeruentuesue-2021-06-17-17-04-09.png)
+![](img/assets/ekran-goeruentuesue-2021-06-17-17-04-09.png)
 
-![](.gitbook/assets/delete.png)
+![](img/assets/delete.png)
 
 ### deleteMany
 

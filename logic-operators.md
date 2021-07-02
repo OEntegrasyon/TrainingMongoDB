@@ -1,4 +1,5 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: $and $or $nor $not
 ---
 
@@ -11,11 +12,11 @@ description: $and $or $nor $not
 | $nor | Fail to match both given clauses |
 | $not | Negates the query requirement |
 
-![](.gitbook/assets/logic.png)
+![](img/assets/logic.png)
 
 ### $nor example
 
-![](.gitbook/assets/nor.png)
+![](img/assets/nor.png)
 
 ---
 **NOTE**
@@ -34,9 +35,9 @@ description: $and $or $nor $not
 {"student_id":{"$gt":25,"$lt":100}}
 ```
 
-![{&quot;$and&quot;:\[{&quot;student\_id&quot;:{&quot;$gt&quot;:25}},{&quot;student\_id&quot;:{&quot;$lt&quot;:100}}\]}](.gitbook/assets/and.png)
+![{&quot;$and&quot;:\[{&quot;student\_id&quot;:{&quot;$gt&quot;:25}},{&quot;student\_id&quot;:{&quot;$lt&quot;:100}}\]}](img/assets/and.png)
 
-![{&quot;student\_id&quot;:{&quot;$gt&quot;:25,&quot;$lt&quot;:100}}](.gitbook/assets/and2.png)
+![{&quot;student\_id&quot;:{&quot;$gt&quot;:25,&quot;$lt&quot;:100}}](img/assets/and2.png)
 
 Varış veya Kalkış  havaalnı KZN kodlu ve Uçak Tipi CR2 veya A81 olan uçuşları bulalım.
 
@@ -320,5 +321,5 @@ $and, bir operatör belirtilmediğinde varsayılan operatör olarak kullanılır
 
 ---
 
-![](.gitbook/assets/syntax.png)
+![](img/assets/syntax.png)
 

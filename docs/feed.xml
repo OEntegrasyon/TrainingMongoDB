@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Özgür Entegrasyon | MongoDB Tutorial]]></title>
+        <description><![CDATA[MongoDB Training Documents]]></description>
+        <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 02 Jul 2021 11:17:53 GMT</lastBuildDate>
+        <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Özgür Mersin]]></author>
+        <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
+        <webMaster><![CDATA[bilselergun@gmail.com (Ergün Elvan Bilsel)]]></webMaster>
+        <category><![CDATA[MongoDB]]></category>
+        <category><![CDATA[Tutorial]]></category>
+        <category><![CDATA[Training]]></category>
+        <item>
+            <title><![CDATA[Mongo Training]]></title>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Mongo Shell - Find]]></title>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Mongo Shell - Insert]]></title>
+            <description><![CDATA[| insert() | insertOne() | insertMany() |
+| :--- | :--- | :--- |
+| db.collection.insert()  bir belgeyi veya belgeleri bir koleksiyona ekler ve tekli ekler için bir WriteResult nesnesi ve toplu ekler için bir BulkWriteResult nesnesi döndürür. | db.collection.insertOne() bir koleksiyona bir belge ekler ve  bir belge döndürür. | db.collection.insertMany() bir koleksiyona birden çok belge ekler ve  bir belge döndürür. |]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell-insert.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell-insert.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Mongo Shell - Update]]></title>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell-update.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell-update.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Mongo Shell - Delete]]></title>
+            <description><![CDATA[Belge silme, hem güncelleme hem de sorgulama işlemleriyle ortak özelliklere sahiptir.]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell-delete.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell-delete.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Comparison Operators]]></title>
+            <description><![CDATA[| Operatör | Açıklaması | Sembol |
+| :--- | :--- | :--- |
+| $eq | EQual to | = |
+| $ne | Not Equal to | ≠ |
+| $gt | Greater Than | > |
+| $lt | Less Than | < |
+| $gte | Greater Than or Equal to | ≥ |
+| $lte | Less Than or Equal to | ≤ |]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/comparison-operators.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/comparison-operators.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Logic Operators]]></title>
+            <description><![CDATA[| Operatör | Açıklaması |
+| :--- | :--- |
+| $and | Match all of the specified query clauses |
+| $or | At least one of the query clauses is matched |
+| $nor | Fail to match both given clauses |
+| $not | Negates the query requirement |]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/logic-operators.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/logic-operators.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Expressive Query Operator]]></title>
+            <description><![CDATA[Aynı belgedeki alanları karşılaştıran sorgu ifadeleri oluşturmak için kullanılır.]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/expressive-query-operator.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/expressive-query-operator.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+    </channel>
+</rss>

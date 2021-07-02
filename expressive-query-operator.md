@@ -1,4 +1,5 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: $expr
 ---
 
@@ -43,7 +44,7 @@ sample\_training veritabanının trips collection dan bir document; "$end statio
 { "$expr": { "$eq": [ "$end station id", "$start station id"] }}
 ```
 
-![](.gitbook/assets/trips.png)
+![](img/assets/trips.png)
 
 Yolculuğun 1200 saniyeden uzun sürdüğü ve aynı istasyonda başlayıp bittiği tüm belgeleri bulalım:
 

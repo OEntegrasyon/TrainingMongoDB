@@ -1,4 +1,5 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: BSON&JSON
 ---
 
@@ -6,14 +7,14 @@ description: BSON&JSON
 
 
 
-![](.gitbook/assets/sorucevap.png)
+![](img/assets/sorucevap.png)
 
 | JSON | BSON |
 | :--- | :--- |
 | mongoimport | mongorestore |
 | mongoexport | mongodump |
 
-![](.gitbook/assets/bson-json.png)
+![](img/assets/bson-json.png)
 
 ### Sample Data Restore
 
@@ -23,14 +24,14 @@ description: BSON&JSON
 show dbs;
 ```
 
-![](.gitbook/assets/showdbs.png)
+![](img/assets/showdbs.png)
 
 ```text
 use sample_airbnb
 show collections;
 ```
 
-![](.gitbook/assets/show-collections.png)
+![](img/assets/show-collections.png)
 
 ### Find & FindOne
 
@@ -40,13 +41,13 @@ show collections
 db.movies.findOne()
 ```
 
-![](.gitbook/assets/find.png)
+![](img/assets/find.png)
 
 ```text
 db.movies.find()
 ```
 
-![](.gitbook/assets/find2.png)
+![](img/assets/find2.png)
 
 **Type "it" for more**
 
@@ -78,13 +79,13 @@ db.movies.find({'year':1983})
 db.movies.find({'year':1983, 'imdb.rating':6.2})
 ```
 
-![](.gitbook/assets/find3.png)
+![](img/assets/find3.png)
 
 ```text
 db.movies.find({'year':1983, 'imdb.rating':6.2,'countries':['Italy']}).pretty()
 ```
 
-![](.gitbook/assets/find4.png)
+![](img/assets/find4.png)
 
 ### Find Filter Filed \(3F\) \( Böyle bir Tabir Yok :\)\)
 
@@ -92,7 +93,7 @@ db.movies.find({'year':1983, 'imdb.rating':6.2,'countries':['Italy']}).pretty()
 db.movies.find({'year':1983, 'imdb.rating':6.2},{'cast':1}).pretty()
 ```
 
-![](.gitbook/assets/find5.png)
+![](img/assets/find5.png)
 
 ### MongoDB Quiz-1
 

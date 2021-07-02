@@ -1,4 +1,5 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: ozgurentegrasyon.com
 ---
 
@@ -14,19 +15,19 @@ description: ozgurentegrasyon.com
 
 #### **Disk**
 
-![](.gitbook/assets/disk.png)
+![](img/assets/disk.png)
 
 #### Network
 
-![](.gitbook/assets/network.png)
+![](img/assets/network.png)
 
 #### Settings
 
-![](.gitbook/assets/settings.png)
+![](img/assets/settings.png)
 
 #### Finished
 
-![](.gitbook/assets/finished.png)
+![](img/assets/finished.png)
 
 ### Keyboard & SSH &  Repo  & FireWall Ayarları
 
@@ -170,9 +171,9 @@ mongod --config /etc/mongod.conf
 
 ### Mongo Compass
 
-![main page](.gitbook/assets/compass.png)
+![main page](img/assets/compass.png)
 
-![](.gitbook/assets/compass2.png)
+![](img/assets/compass2.png)
 
-![](.gitbook/assets/compass3.png)
+![](img/assets/compass3.png)
 

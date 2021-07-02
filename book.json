@@ -1,0 +1,39 @@
+{
+	"plugins": ["ga",
+				"sitemap",
+				"rss",
+				"yametrika"				
+				],
+	"pluginsConfig": {
+		"ga": {
+			"token": "G-6LSR50Y662"
+		},
+		"sitemap": {
+            "hostname": "https://oentegrasyon.github.io/TrainingMongoDB/"
+        },
+		"rss": {
+			"title": "Özgür Entegrasyon | MongoDB Tutorial",
+			"description": "MongoDB Training Documents",
+			"author": "Özgür Mersin",
+			"site_url": "https://oentegrasyon.github.io/TrainingMongoDB/",
+			"feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml",
+			"managingEditor": "huseyinlutin@gmail.com (Hüseyin Lutin)",
+			"webMaster": "bilselergun@gmail.com (Ergün Elvan Bilsel)",
+			"categories": [
+			  "MongoDB",
+			  "Tutorial",
+			  "Training"
+			]
+		  },
+		"yametrika": {
+            "id": 82390285,
+            "webvisor": true,
+            "clickmap": true,
+            "trackLinks": true,
+            "accurateTrackBounce": true,
+            "trackHash": true,
+            "ut": "noindex"
+        }
+		
+	}
+}

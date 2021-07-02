@@ -49,6 +49,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -62,6 +63,8 @@
     
     <link rel="prev" href="mongo-shell-delete.html" />
     
+
+    <link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" title="Özgür Entegrasyon | MongoDB Tutorial" rel="alternate" type="application/rss+xml" />
 
     </head>
     <body>
@@ -361,17 +364,26 @@ db.trips.find({ &quot;tripduration&quot;: { &quot;$lte&quot; : 70 },
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"Sorgu operatörlerini kullanarak hızlı çözümler","title":"Comparison Operators","level":"1.6","depth":1,"next":{"title":"Logic Operators","level":"1.7","depth":1,"path":"logic-operators.md","ref":"logic-operators.md","articles":[]},"previous":{"title":"Mongo Shell - Delete","level":"1.5","depth":1,"path":"mongo-shell-delete.md","ref":"mongo-shell-delete.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"comparison-operators.md","mtime":"2021-07-01T10:31:02.560Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-01T13:37:15.614Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Comparison Operators","description":"Sorgu operatörlerini kullanarak hızlı çözümler","level":"1.6","depth":1,"next":{"title":"Logic Operators","level":"1.7","depth":1,"path":"logic-operators.md","ref":"logic-operators.md","articles":[]},"previous":{"title":"Mongo Shell - Delete","level":"1.5","depth":1,"path":"mongo-shell-delete.md","ref":"mongo-shell-delete.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika"],"pluginsConfig":{"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"comparison-operators.md","mtime":"2021-07-02T08:32:29.365Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-02T11:17:51.904Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
         
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-yametrika/plugin.js"></script>
         
     
         
@@ -398,6 +410,35 @@ db.trips.find({ &quot;tripduration&quot;: { &quot;$lte&quot; : 70 },
         <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script type='text/javascript'>
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter82390285 = new Ya.Metrika({"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"});
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//mc.yandex.ru/metrika/watch.js';
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks');
+    </script>
+    <noscript>
+        <div>
+            <img src="//mc.yandex.ru/watch/82390285" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
 
     </body>
 </html>

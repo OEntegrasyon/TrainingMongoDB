@@ -1,0 +1,666 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Logic Operators · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="$and $or $nor $not">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="expressive-query-operator.html" />
+    
+    
+    <link rel="prev" href="comparison-operators.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Mongo Training
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mongo-shell.html">
+            
+                <a href="mongo-shell.html">
+            
+                    
+                    Mongo Shell - Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="mongo-shell-insert.html">
+            
+                <a href="mongo-shell-insert.html">
+            
+                    
+                    Mongo Shell - Insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="mongo-shell-update.html">
+            
+                <a href="mongo-shell-update.html">
+            
+                    
+                    Mongo Shell - Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mongo-shell-delete.html">
+            
+                <a href="mongo-shell-delete.html">
+            
+                    
+                    Mongo Shell - Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="comparison-operators.html">
+            
+                <a href="comparison-operators.html">
+            
+                    
+                    Comparison Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="logic-operators.html">
+            
+                <a href="logic-operators.html">
+            
+                    
+                    Logic Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="expressive-query-operator.html">
+            
+                <a href="expressive-query-operator.html">
+            
+                    
+                    Expressive Query Operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Logic Operators</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="logic-operators">Logic Operators</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Operat&#xF6;r</th>
+<th style="text-align:left">A&#xE7;&#x131;klamas&#x131;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$and</td>
+<td style="text-align:left">Match all of the specified query clauses</td>
+</tr>
+<tr>
+<td style="text-align:left">$or</td>
+<td style="text-align:left">At least one of the query clauses is matched</td>
+</tr>
+<tr>
+<td style="text-align:left">$nor</td>
+<td style="text-align:left">Fail to match both given clauses</td>
+</tr>
+<tr>
+<td style="text-align:left">$not</td>
+<td style="text-align:left">Negates the query requirement</td>
+</tr>
+</tbody>
+</table>
+<p><img src="img/assets/logic.png" alt=""></p>
+<h3 id="nor-example">$nor example</h3>
+<p><img src="img/assets/nor.png" alt=""></p>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>{$nor:[{watlev:&quot;always dry&quot;},{watlev:&quot;always under water/submerged&quot;},{watlev:&quot;covers and uncovers&quot;}]}</p>
+<hr>
+<h3 id="and">$and</h3>
+<pre><code class="lang-text">{&quot;$and&quot;:[{&quot;student_id&quot;:{&quot;$gt&quot;:25}},{&quot;student_id&quot;:{&quot;$lt&quot;:100}}]}
+</code></pre>
+<pre><code class="lang-text">{&quot;student_id&quot;:{&quot;$gt&quot;:25,&quot;$lt&quot;:100}}
+</code></pre>
+<p><img src="img/assets/and.png" alt="{&quot;$and&quot;:\[{&quot;student\_id&quot;:{&quot;$gt&quot;:25}},{&quot;student\_id&quot;:{&quot;$lt&quot;:100}}\]}"></p>
+<p><img src="img/assets/and2.png" alt="{&quot;student\_id&quot;:{&quot;$gt&quot;:25,&quot;$lt&quot;:100}}"></p>
+<p>Var&#x131;&#x15F; veya Kalk&#x131;&#x15F;  havaaln&#x131; KZN kodlu ve U&#xE7;ak Tipi CR2 veya A81 olan u&#xE7;u&#x15F;lar&#x131; bulal&#x131;m.</p>
+<pre><code class="lang-text">use sample_training
+db.routes.find({ &quot;$and&quot;: [ { &quot;$or&quot; :[ { &quot;dst_airport&quot;: &quot;KZN&quot; },
+                                    { &quot;src_airport&quot;: &quot;KZN&quot; }
+                                  ] },
+                          { &quot;$or&quot; :[ { &quot;airplane&quot;: &quot;CR2&quot; },
+                                     { &quot;airplane&quot;: &quot;A81&quot; } ] }
+                         ]}).pretty()
+</code></pre>
+<pre><code class="lang-text">{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa31&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;CEK&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa32&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;ASF&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa34&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;DME&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa38&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;AER&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa3b&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;EGO&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa3e&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;AER&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa3f&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;ASF&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa40&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;CEK&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa41&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;DME&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa42&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;EGO&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa43&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;LED&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa44&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;SVX&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa45&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;LED&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39b732b6122f877fa52&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 410,
+        &quot;name&quot; : &quot;Aerocondor&quot;,
+        &quot;alias&quot; : &quot;2B&quot;,
+        &quot;iata&quot; : &quot;ARD&quot;
+    },
+    &quot;src_airport&quot; : &quot;SVX&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;CR2&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39c732b6122f87868bc&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 641,
+        &quot;name&quot; : &quot;Rossiya-Russian Airlines&quot;,
+        &quot;alias&quot; : &quot;FV&quot;,
+        &quot;iata&quot; : &quot;SDM&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;LED&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;A81&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39c732b6122f87868be&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 641,
+        &quot;name&quot; : &quot;Rossiya-Russian Airlines&quot;,
+        &quot;alias&quot; : &quot;FV&quot;,
+        &quot;iata&quot; : &quot;SDM&quot;
+    },
+    &quot;src_airport&quot; : &quot;LED&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;A81&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39c732b6122f878c0f9&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 130,
+        &quot;name&quot; : &quot;Aeroflot Russian Airlines&quot;,
+        &quot;alias&quot; : &quot;SU&quot;,
+        &quot;iata&quot; : &quot;AFL&quot;
+    },
+    &quot;src_airport&quot; : &quot;KZN&quot;,
+    &quot;dst_airport&quot; : &quot;LED&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;A81&quot;
+}
+{
+    &quot;_id&quot; : ObjectId(&quot;56e9b39c732b6122f878c120&quot;),
+    &quot;airline&quot; : {
+        &quot;id&quot; : 130,
+        &quot;name&quot; : &quot;Aeroflot Russian Airlines&quot;,
+        &quot;alias&quot; : &quot;SU&quot;,
+        &quot;iata&quot; : &quot;AFL&quot;
+    },
+    &quot;src_airport&quot; : &quot;LED&quot;,
+    &quot;dst_airport&quot; : &quot;KZN&quot;,
+    &quot;codeshare&quot; : &quot;&quot;,
+    &quot;stops&quot; : 0,
+    &quot;airplane&quot; : &quot;A81&quot;
+}
+</code></pre>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>ayn&#x131;  operat&#xF6;r&#xFC; bir sorguya birden fazla kez eklemeniz gerekti&#x11F;inde $and operat&#xF6;r&#xFC;n&#xFC; kullanman&#x131;z gerekmektedir.</p>
+<hr>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>$and, bir operat&#xF6;r belirtilmedi&#x11F;inde varsay&#x131;lan operat&#xF6;r olarak kullan&#x131;l&#x131;r.</p>
+<hr>
+<p><img src="img/assets/syntax.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="comparison-operators.html" class="navigation navigation-prev " aria-label="Previous page: Comparison Operators">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="expressive-query-operator.html" class="navigation navigation-next " aria-label="Next page: Expressive Query Operator">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Logic Operators","description":"$and $or $nor $not","level":"1.7","depth":1,"next":{"title":"Expressive Query Operator","level":"1.8","depth":1,"path":"expressive-query-operator.md","ref":"expressive-query-operator.md","articles":[]},"previous":{"title":"Comparison Operators","level":"1.6","depth":1,"path":"comparison-operators.md","ref":"comparison-operators.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["yametrika"],"pluginsConfig":{"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"logic-operators.md","mtime":"2021-07-02T08:32:18.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-02T09:02:53.124Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-yametrika/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type='text/javascript'>
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter82390285 = new Ya.Metrika({"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"});
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//mc.yandex.ru/metrika/watch.js';
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks');
+    </script>
+    <noscript>
+        <div>
+            <img src="//mc.yandex.ru/watch/82390285" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
+
+    </body>
+</html>
+

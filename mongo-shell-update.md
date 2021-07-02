@@ -1,10 +1,11 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: $inc $set $push
 ---
 
 # Mongo Shell - Update
 
-![](.gitbook/assets/update.png)
+![](img/assets/update.png)
 
 ```text
 use sample_training

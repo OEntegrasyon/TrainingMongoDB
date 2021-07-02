@@ -49,6 +49,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -62,6 +63,8 @@
     
     <link rel="prev" href="./" />
     
+
+    <link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" title="Özgür Entegrasyon | MongoDB Tutorial" rel="alternate" type="application/rss+xml" />
 
     </head>
     <body>
@@ -199,8 +202,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="http://ozgurentegrasyon.com" target="blank" class="gitbook-link">
-            Özgür Entegrasyon
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -239,7 +242,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="mongo-shell---find">Mongo Shell - Find</h1>
-<p><img src=".gitbook/assets/sorucevap.png" alt=""></p>
+<p><img src="img/assets/sorucevap.png" alt=""></p>
 <table>
 <thead>
 <tr>
@@ -258,25 +261,25 @@
 </tr>
 </tbody>
 </table>
-<p><img src=".gitbook/assets/bson-json.png" alt=""></p>
+<p><img src="img/assets/bson-json.png" alt=""></p>
 <h3 id="sample-data-restore">Sample Data Restore</h3>
 <p><a href="https://erelbi.github.io/mongodb\_sample\_data/" target="_blank">&apos;Simple Data&apos;</a></p>
 <pre><code class="lang-text">show dbs;
 </code></pre>
-<p><img src=".gitbook/assets/showdbs.png" alt=""></p>
+<p><img src="img/assets/showdbs.png" alt=""></p>
 <pre><code class="lang-text">use sample_airbnb
 show collections;
 </code></pre>
-<p><img src=".gitbook/assets/show-collections.png" alt=""></p>
+<p><img src="img/assets/show-collections.png" alt=""></p>
 <h3 id="find--findone">Find &amp; FindOne</h3>
 <pre><code class="lang-text">use sample_mflix
 show collections
 db.movies.findOne()
 </code></pre>
-<p><img src=".gitbook/assets/find.png" alt=""></p>
+<p><img src="img/assets/find.png" alt=""></p>
 <pre><code class="lang-text">db.movies.find()
 </code></pre>
-<p><img src=".gitbook/assets/find2.png" alt=""></p>
+<p><img src="img/assets/find2.png" alt=""></p>
 <p><strong>Type &quot;it&quot; for more</strong></p>
 <pre><code class="lang-text">it
 </code></pre>
@@ -292,14 +295,14 @@ db.movies.findOne()
 <h3 id="subdocument-find">Subdocument Find</h3>
 <pre><code class="lang-text">db.movies.find({&apos;year&apos;:1983, &apos;imdb.rating&apos;:6.2})
 </code></pre>
-<p><img src=".gitbook/assets/find3.png" alt=""></p>
+<p><img src="img/assets/find3.png" alt=""></p>
 <pre><code class="lang-text">db.movies.find({&apos;year&apos;:1983, &apos;imdb.rating&apos;:6.2,&apos;countries&apos;:[&apos;Italy&apos;]}).pretty()
 </code></pre>
-<p><img src=".gitbook/assets/find4.png" alt=""></p>
+<p><img src="img/assets/find4.png" alt=""></p>
 <h3 id="find-filter-filed-3f--b&#xF6;yle-bir-tabir-yok-">Find Filter Filed (3F) ( B&#xF6;yle bir Tabir Yok :))</h3>
 <pre><code class="lang-text">db.movies.find({&apos;year&apos;:1983, &apos;imdb.rating&apos;:6.2},{&apos;cast&apos;:1}).pretty()
 </code></pre>
-<p><img src=".gitbook/assets/find5.png" alt=""></p>
+<p><img src="img/assets/find5.png" alt=""></p>
 <h3 id="mongodb-quiz-1">MongoDB Quiz-1</h3>
 <p><a href="https://forms.gle/8M3PBmYM5vT5mybr8" target="_blank">https://forms.gle/8M3PBmYM5vT5mybr8</a></p>
 
@@ -345,14 +348,27 @@ db.movies.findOne()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"BSON&JSON","title":"Mongo Shell - Find","level":"1.2","depth":1,"next":{"title":"Mongo Shell - Insert","level":"1.3","depth":1,"path":"mongo-shell-insert.md","ref":"mongo-shell-insert.md","articles":[]},"previous":{"title":"Mongo Training","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-shell.md","mtime":"2021-07-01T12:42:37.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-01T12:50:16.979Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mongo Shell - Find","description":"BSON&JSON","level":"1.2","depth":1,"next":{"title":"Mongo Shell - Insert","level":"1.3","depth":1,"path":"mongo-shell-insert.md","ref":"mongo-shell-insert.md","articles":[]},"previous":{"title":"Mongo Training","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika"],"pluginsConfig":{"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-shell.md","mtime":"2021-07-02T08:31:51.243Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-02T11:17:51.904Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-yametrika/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -378,6 +394,35 @@ db.movies.findOne()
         <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script type='text/javascript'>
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter82390285 = new Ya.Metrika({"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"});
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//mc.yandex.ru/metrika/watch.js';
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks');
+    </script>
+    <noscript>
+        <div>
+            <img src="//mc.yandex.ru/watch/82390285" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
 
     </body>
 </html>

@@ -1,4 +1,5 @@
 ---
+title: MongoDB training with Özgür Entegrasyon
 description: insert&insertOne&insertMany
 ---
 
@@ -36,7 +37,7 @@ BulkWriteResult({
 
 ```
 
-![](.gitbook/assets/insert.png)
+![](img/assets/insert.png)
 
 ### insertOne\(\)
 
@@ -119,7 +120,7 @@ db.testcollection.insert([{"_id":1 ,"x":1},{"_id":1,"x":2},{"_id":2,"x":3}])
 
 ```
 
-![](.gitbook/assets/insert-1.png)
+![](img/assets/insert-1.png)
 
 ```text
 db.testcollection.insert([{"_id":1 ,"x":1},{"_id":1,"x":2},{"_id":2,"x":3}],{"ordered":false})
@@ -155,7 +156,7 @@ BulkWriteResult({
 
 ```
 
-![](.gitbook/assets/insert-2.png)
+![](img/assets/insert-2.png)
 
 MongoDB nin sıralı mı yoksa sırasız bir ekleme mi gerçekleştireceğini belirten bir boole değeri . Varsayılan olarak `true`.
 
