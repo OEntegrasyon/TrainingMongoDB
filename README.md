@@ -1,8 +1,10 @@
 ---
 title: MongoDB training with Özgür Entegrasyon
 description: ozgurentegrasyon.com
+customjs:
+  - https://github.com/OEntegrasyon/TrainingMongoDB/tree/master/docs/gtag.js
 ---
-{% github_embed "https://github.com/OEntegrasyon/TrainingMongoDB/tree/master/docs/gtag.js" %}{% endgithub_embed %}
+
 # Mongo Training
 
 ## Install VM
