@@ -2,7 +2,8 @@
 	"plugins": ["ga",
 				"sitemap",
 				"rss",
-				"yametrika"				
+				"yametrika",
+				"gtm"			
 				],
 	"pluginsConfig": {
 		"ga": {
@@ -33,7 +34,11 @@
             "accurateTrackBounce": true,
             "trackHash": true,
             "ut": "noindex"
+        },
+		"gtm": {
+            "token": "GTM-K4LTD9P"
         }
+
 		
 	}
 }
