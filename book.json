@@ -3,7 +3,8 @@
 				"sitemap",
 				"rss",
 				"yametrika",
-				"gtm"			
+				"gtm",
+				"canonical-link"			
 				],
 	"pluginsConfig": {
 		"ga": {
@@ -37,7 +38,10 @@
         },
 		"gtm": {
             "token": "GTM-K4LTD9P"
-        }
+        },
+		"canonical-link": {
+			"baseURL": "https://oentegrasyon.github.io/TrainingMongoDB/"
+		  }
 
 		
 	}
