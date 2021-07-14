@@ -271,7 +271,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <script src="_gitbook_plugin_analytics.js"></script>
+                                <table>
+<thead>
+<tr>
+<th>Authentication</th>
+<th>Authorization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kimlik do&#x11F;rulama, bir kullan&#x131;c&#x131;n&#x131;n kimli&#x11F;ini do&#x11F;rular</td>
+<td>Yetkilendirme, do&#x11F;rulanm&#x131;&#x15F; kullan&#x131;c&#x131;lar&#x131;n kaynaklara ve i&#x15F;lemlere eri&#x15F;imini belirler</td>
+</tr>
+</tbody>
+</table>
+<p>MongoDB, kullan&#x131;c&#x131;lar i&#xE7;in eri&#x15F;imi belirlemek i&#xE7;in rol tabanl&#x131; eri&#x15F;im denetimi (RBAC) kullan&#x131;r.</p>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>Rol tabanl&#x131; eri&#x15F;im denetimi (RBAC), bir ki&#x15F;inin bir i&#x15F;teki rol&#xFC;ne dayanan bir eri&#x15F;im g&#xFC;venli&#x11F;i y&#xF6;ntemidir. Rol tabanl&#x131; eri&#x15F;im kontrol&#xFC;, g&#xFC;venli&#x11F;i sa&#x11F;laman&#x131;n bir yoludur &#xE7;&#xFC;nk&#xFC; yaln&#x131;zca &#xE7;al&#x131;&#x15F;anlar&#x131;n i&#x15F;lerini yapmak i&#xE7;in ihtiya&#xE7; duyduklar&#x131; bilgilere eri&#x15F;melerine izin verirken, kendileriyle ilgili olmayan ek bilgilere eri&#x15F;melerini engeller. Bir &#xE7;al&#x131;&#x15F;an&#x131;n rol&#xFC; kendisine verilen izinleri belirler ve daha d&#xFC;&#x15F;&#xFC;k d&#xFC;zeyli &#xE7;al&#x131;&#x15F;anlar&#x131;n hassas bilgilere eri&#x15F;ememelerini veya &#xFC;st d&#xFC;zey g&#xF6;revler ger&#xE7;ekle&#x15F;tirememelerini sa&#x11F;lar.</p>
+<hr>
+<h1 id="create-user">Create User</h1>
+<p><img src="gitbook/images/assets/auth.png" alt=""></p>
+<p>Ekranda, kullan&#x131;c&#x131; ad&#x131; ve &#x15F;ifre ile yeni bir kullan&#x131;c&#x131; olu&#x15F;turan bir komut g&#xF6;rmektesiniz.</p>
+<p>&#x130;lk &#xF6;&#x11F;e db.createUser komutudur.</p>
+<p>Bu, yeni kullan&#x131;c&#x131;lar olu&#x15F;turmak i&#xE7;in kullan&#x131;lan komuttur.</p>
+<p>Burada read ve readWrite olarak g&#xF6;rd&#xFC;&#x11F;&#xFC;n&#xFC;z  rollerde olu&#x15F;turulmu&#x15F;tur, yani MongoDB&apos;ye dahil edilmi&#x15F;tir, bu nedenle bu rolleri kendiniz olu&#x15F;turman&#x131;z gerekmez.</p>
+<p>MongoDB, y&#xF6;neticilerin ayr&#x131;cal&#x131;klar&#x131; birlikte kolayca gruplayabilmesi i&#xE7;in bu roller olu&#x15F;turulmu&#x15F;tur.</p>
+<p>Ancak y&#xF6;neticiler, se&#xE7;tikleri ayr&#x131;cal&#x131;klarla kendi &#xF6;zel rollerini olu&#x15F;turma olana&#x11F;&#x131;na da sahiptir.</p>
+<h2 id="example-create-role">Example Create Role</h2>
+<pre><code class="lang-sh">use admin
+db.createRole(
+   {
+     role: <span class="hljs-string">&quot;mongostatRole&quot;</span>, 
+     privileges: [
+       { resource: { cluster: <span class="hljs-literal">true</span> }, actions: [ <span class="hljs-string">&quot;serverStatus&quot;</span> ] }
+     ],
+     roles: []
+   }
+)
+</code></pre>
+<h2 id="mongo-quiz-2-database-user-authentication">Mongo Quiz-2 (Database User Authentication)</h2>
+<p><a href="https://forms.gle/gQarAxKWSjSdxNHNA" target="_blank">https://forms.gle/gQarAxKWSjSdxNHNA</a></p>
+<script src="_gitbook_plugin_analytics.js"></script>
                                 
                                 </section>
                             
@@ -310,7 +351,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mongodb authentication","description":"Mongo AUTH","level":"1.9","depth":1,"previous":{"title":"Expressive Query Operator","level":"1.8","depth":1,"path":"expressive-query-operator.md","ref":"expressive-query-operator.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-auth.md","mtime":"2021-07-14T08:39:52.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-14T12:21:22.920Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mongodb authentication","description":"Mongo AUTH","level":"1.9","depth":1,"previous":{"title":"Expressive Query Operator","level":"1.8","depth":1,"path":"expressive-query-operator.md","ref":"expressive-query-operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-auth.md","mtime":"2021-07-14T13:52:03.137Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-14T13:52:11.674Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
