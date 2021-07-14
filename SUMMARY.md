@@ -9,4 +9,5 @@
 * [Logic Operators](logic-operators.md)
 * [Expressive Query Operator](expressive-query-operator.md)
 * [Mongodb authentication](mongo-auth.md)
+* [Mongodb Create User](mongo-create-user.md)
 
