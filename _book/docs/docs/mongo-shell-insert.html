@@ -1,0 +1,531 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mongo Shell - Insert · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="insert&insertOne&insertMany">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mongo-shell-update.html" />
+    
+    
+    <link rel="prev" href="mongo-shell.html" />
+    
+
+    <link rel="canonical" href="https://oentegrasyon.github.io/TrainingMongoDB/mongo-shell-insert.html">
+
+    <link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" title="Özgür Entegrasyon | MongoDB Tutorial" rel="alternate" type="application/rss+xml" />
+
+    </head>
+    <body>
+        
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K4LTD9P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K4LTD9P');
+    </script>
+    
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Mongo Training
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mongo-shell.html">
+            
+                <a href="mongo-shell.html">
+            
+                    
+                    Mongo Shell - Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="mongo-shell-insert.html">
+            
+                <a href="mongo-shell-insert.html">
+            
+                    
+                    Mongo Shell - Insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="mongo-shell-update.html">
+            
+                <a href="mongo-shell-update.html">
+            
+                    
+                    Mongo Shell - Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mongo-shell-delete.html">
+            
+                <a href="mongo-shell-delete.html">
+            
+                    
+                    Mongo Shell - Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="comparison-operators.html">
+            
+                <a href="comparison-operators.html">
+            
+                    
+                    Comparison Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="logic-operators.html">
+            
+                <a href="logic-operators.html">
+            
+                    
+                    Logic Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="expressive-query-operator.html">
+            
+                <a href="expressive-query-operator.html">
+            
+                    
+                    Expressive Query Operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="mongo-auth.html">
+            
+                <a href="mongo-auth.html">
+            
+                    
+                    Mongodb authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Mongo Shell - Insert</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mongo-shell---insert">Mongo Shell - Insert</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">insert()</th>
+<th style="text-align:left">insertOne()</th>
+<th style="text-align:left">insertMany()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">db.collection.insert()  bir belgeyi veya belgeleri bir koleksiyona ekler ve tekli ekler i&#xE7;in bir WriteResult nesnesi ve toplu ekler i&#xE7;in bir BulkWriteResult nesnesi d&#xF6;nd&#xFC;r&#xFC;r.</td>
+<td style="text-align:left">db.collection.insertOne() bir koleksiyona bir belge ekler ve  bir belge d&#xF6;nd&#xFC;r&#xFC;r.</td>
+<td style="text-align:left">db.collection.insertMany() bir koleksiyona birden &#xE7;ok belge ekler ve  bir belge d&#xF6;nd&#xFC;r&#xFC;r.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="insert">insert</h3>
+<pre><code class="lang-text">use test
+&gt; var test1 = db.testcollection.insert({&quot;x&quot;:1,&quot;y&quot;:0,&quot;z&quot;:8,&quot;c&quot;:1})
+&gt; test1
+WriteResult({ &quot;nInserted&quot; : 1 })
+</code></pre>
+<pre><code class="lang-text">&gt; var test2=db.testcollection.insert([{&quot;b&quot;: 3}, {&apos;c&apos;: 4}])
+&gt; test2
+BulkWriteResult({
+    &quot;writeErrors&quot; : [ ],
+    &quot;writeConcernErrors&quot; : [ ],
+    &quot;nInserted&quot; : 2,
+    &quot;nUpserted&quot; : 0,
+    &quot;nMatched&quot; : 0,
+    &quot;nModified&quot; : 0,
+    &quot;nRemoved&quot; : 0,
+    &quot;upserted&quot; : [ ]
+})
+</code></pre>
+<p><img src="img/assets/insert.png" alt=""></p>
+<h3 id="insertone">insertOne()</h3>
+<pre><code class="lang-text">&gt; var test3 = db.testcollection.insertOne({&quot;a&quot;: 3})
+&gt; test3
+{
+    &quot;acknowledged&quot; : true,
+    &quot;insertedId&quot; : ObjectId(&quot;60ca0c22ad4e6088daf3c19c&quot;)
+}
+</code></pre>
+<h3 id="insertmany">insertMany()</h3>
+<pre><code class="lang-text">&gt; var test4 = db.testcollection.insertMany([{&quot;b&quot;: 3}, {&apos;c&apos;: 4}])
+&gt; test4
+{
+    &quot;acknowledged&quot; : true,
+    &quot;insertedIds&quot; : [
+        ObjectId(&quot;60ca0d9dad4e6088daf3c19f&quot;),
+        ObjectId(&quot;60ca0d9dad4e6088daf3c1a0&quot;)
+    ]
+}
+</code></pre>
+<h3 id="insert--error">insert &amp; Error</h3>
+<pre><code class="lang-text">mongorestore --db sample_weatherdata sample_weatherdata/sample_weatherdata/
+</code></pre>
+<pre><code class="lang-text">2021-06-1T17:55:54.225+0300    continuing through error: 
+2021-06-1T17:55:54.225+0300    no indexes to restore
+2021-06-1T17:55:54.225+0300    finished restoring sample_weatherdata.data (0 documents, 10000 failures)
+2021-06-1T17:55:54.225+0300    0 document(s) restored successfully. 10000 document(s) failed to restore
+</code></pre>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>continuing through error: E11000 duplicate key error collection: sample<em>weatherdata.data index: _id</em> dup key: { _id: ObjectId(&apos;5553a99ae4b02cf715120faf&apos;) }</p>
+<hr>
+<h4 id="drop">Drop</h4>
+<pre><code class="lang-text">mongorestore  --drop --db sample_weatherdata sample_weatherdata/sample_weatherdata/
+</code></pre>
+<h4 id="ordered">Ordered</h4>
+<pre><code class="lang-text">use test
+db.testcollection.insert([{&quot;_id&quot;:1 ,&quot;x&quot;:1},{&quot;_id&quot;:1,&quot;x&quot;:2},{&quot;_id&quot;:2,&quot;x&quot;:3}])
+
+&gt;BulkWriteResult({
+    &quot;writeErrors&quot; : [
+        {
+            &quot;index&quot; : 1,
+            &quot;code&quot; : 11000,
+            &quot;errmsg&quot; : &quot;E11000 duplicate key error collection: test.testcollection index: _id_ dup key: { _id: 1.0 }&quot;,
+            &quot;op&quot; : {
+                &quot;_id&quot; : 1,
+                &quot;x&quot; : 2
+            }
+        }
+    ],
+    &quot;writeConcernErrors&quot; : [ ],
+    &quot;nInserted&quot; : 1,
+    &quot;nUpserted&quot; : 0,
+    &quot;nMatched&quot; : 0,
+    &quot;nModified&quot; : 0,
+    &quot;nRemoved&quot; : 0,
+    &quot;upserted&quot; : [ ]
+</code></pre>
+<p><img src="img/assets/insert-1.png" alt=""></p>
+<pre><code class="lang-text">db.testcollection.insert([{&quot;_id&quot;:1 ,&quot;x&quot;:1},{&quot;_id&quot;:1,&quot;x&quot;:2},{&quot;_id&quot;:2,&quot;x&quot;:3}],{&quot;ordered&quot;:false})
+&gt;
+BulkWriteResult({
+    &quot;writeErrors&quot; : [
+        {
+            &quot;index&quot; : 0,
+            &quot;code&quot; : 11000,
+            &quot;errmsg&quot; : &quot;E11000 duplicate key error collection: test.testcollection index: _id_ dup key: { _id: 1.0 }&quot;,
+            &quot;op&quot; : {
+                &quot;_id&quot; : 1,
+                &quot;x&quot; : 1
+            }
+        },
+        {
+            &quot;index&quot; : 1,
+            &quot;code&quot; : 11000,
+            &quot;errmsg&quot; : &quot;E11000 duplicate key error collection: test.testcollection index: _id_ dup key: { _id: 1.0 }&quot;,
+            &quot;op&quot; : {
+                &quot;_id&quot; : 1,
+                &quot;x&quot; : 2
+            }
+        }
+    ],
+    &quot;writeConcernErrors&quot; : [ ],
+    &quot;nInserted&quot; : 1,
+    &quot;nUpserted&quot; : 0,
+    &quot;nMatched&quot; : 0,
+    &quot;nModified&quot; : 0,
+    &quot;nRemoved&quot; : 0,
+    &quot;upserted&quot; : [ ]
+</code></pre>
+<p><img src="img/assets/insert-2.png" alt=""></p>
+<p>MongoDB nin s&#x131;ral&#x131; m&#x131; yoksa s&#x131;ras&#x131;z bir ekleme mi ger&#xE7;ekle&#x15F;tirece&#x11F;ini belirten bir boole de&#x11F;eri . Varsay&#x131;lan olarak <code>true</code>.</p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mongo-shell.html" class="navigation navigation-prev " aria-label="Previous page: Mongo Shell - Find">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mongo-shell-update.html" class="navigation navigation-next " aria-label="Next page: Mongo Shell - Update">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Mongo Shell - Insert","description":"insert&insertOne&insertMany","level":"1.3","depth":1,"next":{"title":"Mongo Shell - Update","level":"1.4","depth":1,"path":"mongo-shell-update.md","ref":"mongo-shell-update.md","articles":[]},"previous":{"title":"Mongo Shell - Find","level":"1.2","depth":1,"path":"mongo-shell.md","ref":"mongo-shell.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-shell-insert.md","mtime":"2021-07-02T08:32:07.667Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-14T11:31:45.822Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-yametrika/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-gtm/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type='text/javascript'>
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter82390285 = new Ya.Metrika({"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"});
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//mc.yandex.ru/metrika/watch.js';
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks');
+    </script>
+    <noscript>
+        <div>
+            <img src="//mc.yandex.ru/watch/82390285" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
+
+    </body>
+</html>
+
