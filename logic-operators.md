@@ -12,11 +12,11 @@ description: $and $or $nor $not
 | $nor | Fail to match both given clauses |
 | $not | Negates the query requirement |
 
-![](img/assets/logic.png)
+![](gitbook/images/assets/logic.png)
 
 ### $nor example
 
-![](img/assets/nor.png)
+![](gitbook/images/assets/nor.png)
 
 ---
 **NOTE**
@@ -321,5 +321,5 @@ $and, bir operatör belirtilmediğinde varsayılan operatör olarak kullanılır
 
 ---
 
-![](img/assets/syntax.png)
+![](gitbook/images/assets/syntax.png)
 

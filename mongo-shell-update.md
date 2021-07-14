@@ -5,7 +5,7 @@ description: $inc $set $push
 
 # Mongo Shell - Update
 
-![](img/assets/update.png)
+![](gitbook/images/assets/update.png)
 
 ```text
 use sample_training

@@ -17,19 +17,19 @@ customjs:
 
 #### **Disk**
 
-![Disk Ayarları](img/assets/disk.png)
+![Disk Ayarları](gitbook/images/assets/disk.png)
 
 #### Network
 
-![NetworkAyarları](img/assets/network.png)
+![NetworkAyarları](gitbook/images/assets/network.png)
 
 #### Settings
 
-![Genel Ayarlar](img/assets/settings.png)
+![Genel Ayarlar](gitbook/images/assets/settings.png)
 
 #### Finished
 
-![Kurlumun Tamamlanması](img/assets/finished.png)
+![Kurlumun Tamamlanması](gitbook/images/assets/finished.png)
 
 ### Keyboard & SSH &  Repo  & FireWall Ayarları
 
@@ -173,9 +173,9 @@ mongod --config /etc/mongod.conf
 
 ### Mongo Compass
 
-![main page](img/assets/compass.png)
+![main page](gitbook/images/assets/compass.png)
 
-![compass-2](img/assets/compass2.png)
+![compass-2](gitbook/images/assets/compass2.png)
 
-![compass-3](img/assets/compass3.png)
+![compass-3](gitbook/images/assets/compass3.png)
 

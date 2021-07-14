@@ -7,9 +7,9 @@ description: delete & deleteMany & drop
 
 Belge silme, hem güncelleme hem de sorgulama işlemleriyle ortak özelliklere sahiptir.
 
-![](img/assets/ekran-goeruentuesue-2021-06-17-17-04-09.png)
+![](gitbook/images/assets/ekran-goeruentuesue-2021-06-17-17-04-09.png)
 
-![](img/assets/delete.png)
+![](gitbook/images/assets/delete.png)
 
 ### deleteMany
 

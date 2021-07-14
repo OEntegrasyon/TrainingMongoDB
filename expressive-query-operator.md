@@ -44,7 +44,7 @@ sample\_training veritabanının trips collection dan bir document; "$end statio
 { "$expr": { "$eq": [ "$end station id", "$start station id"] }}
 ```
 
-![](img/assets/trips.png)
+![](gitbook/images/assets/trips.png)
 
 Yolculuğun 1200 saniyeden uzun sürdüğü ve aynı istasyonda başlayıp bittiği tüm belgeleri bulalım:
 

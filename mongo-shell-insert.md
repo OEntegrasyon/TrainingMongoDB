@@ -37,7 +37,7 @@ BulkWriteResult({
 
 ```
 
-![](img/assets/insert.png)
+![](gitbook/images/assets/insert.png)
 
 ### insertOne\(\)
 
@@ -120,7 +120,7 @@ db.testcollection.insert([{"_id":1 ,"x":1},{"_id":1,"x":2},{"_id":2,"x":3}])
 
 ```
 
-![](img/assets/insert-1.png)
+![](gitbook/images/assets/insert-1.png)
 
 ```text
 db.testcollection.insert([{"_id":1 ,"x":1},{"_id":1,"x":2},{"_id":2,"x":3}],{"ordered":false})
@@ -156,7 +156,7 @@ BulkWriteResult({
 
 ```
 
-![](img/assets/insert-2.png)
+![](gitbook/images/assets/insert-2.png)
 
 MongoDB nin sıralı mı yoksa sırasız bir ekleme mi gerçekleştireceğini belirten bir boole değeri . Varsayılan olarak `true`.
 
