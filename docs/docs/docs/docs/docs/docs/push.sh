@@ -2,7 +2,7 @@
 gitbook build > /dev/null 2>&1
 sleep 1 &&
 echo "Dosyalar Oluşturuldu"
-cp -p -r _book/* docs/
+rsync -av _book/* docs/
 #rm -rf /docs/docs
 #git add .
 #sleep 1  & echo "Dosyalar Ekleniyor"

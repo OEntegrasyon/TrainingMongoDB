@@ -9,5 +9,5 @@ git add .
 sleep 1 
 echo "Dosyalar Ekleniyor"
 read -p "Commit Giriniz:   " desc 
-#git commit -m $desc  &&
+git commit -m $desc  
 #git push  origin master &&
