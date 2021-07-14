@@ -8,4 +8,5 @@
 * [Comparison Operators](comparison-operators.md)
 * [Logic Operators](logic-operators.md)
 * [Expressive Query Operator](expressive-query-operator.md)
+* [Mongodb authentication](mongo-auth.md)
 

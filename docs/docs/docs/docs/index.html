@@ -1,0 +1,520 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mongo Training · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="ozgurentegrasyon.com">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mongo-shell.html" />
+    
+    
+
+    <link rel="canonical" href="https://oentegrasyon.github.io/TrainingMongoDB/">
+
+    <link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" title="Özgür Entegrasyon | MongoDB Tutorial" rel="alternate" type="application/rss+xml" />
+
+    </head>
+    <body>
+        
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K4LTD9P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K4LTD9P');
+    </script>
+    
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Mongo Training
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mongo-shell.html">
+            
+                <a href="mongo-shell.html">
+            
+                    
+                    Mongo Shell - Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="mongo-shell-insert.html">
+            
+                <a href="mongo-shell-insert.html">
+            
+                    
+                    Mongo Shell - Insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="mongo-shell-update.html">
+            
+                <a href="mongo-shell-update.html">
+            
+                    
+                    Mongo Shell - Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mongo-shell-delete.html">
+            
+                <a href="mongo-shell-delete.html">
+            
+                    
+                    Mongo Shell - Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="comparison-operators.html">
+            
+                <a href="comparison-operators.html">
+            
+                    
+                    Comparison Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="logic-operators.html">
+            
+                <a href="logic-operators.html">
+            
+                    
+                    Logic Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="expressive-query-operator.html">
+            
+                <a href="expressive-query-operator.html">
+            
+                    
+                    Expressive Query Operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="mongo-auth.html">
+            
+                <a href="mongo-auth.html">
+            
+                    
+                    Mongodb authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Mongo Training</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mongo-training">Mongo Training</h1>
+<h2 id="install-vm">Install VM</h2>
+<ul>
+<li>OS : <a href="https://download.fedoraproject.org/pub/fedora/linux/releases/34/Server/x86_64/iso/Fedora-Server-dvd-x86_64-34-1.2.iso" target="_blank">Fedora 34 Server </a></li>
+<li>Cpu: 2 sockets</li>
+<li>Ram: 2048 MB</li>
+<li>Disk: 20 GB (LVM)</li>
+<li>Network: NAT &amp; Bridge</li>
+</ul>
+<h4 id="disk"><strong>Disk</strong></h4>
+<p><img src="img/assets/disk.png" alt="Disk Ayarlar&#x131;"></p>
+<h4 id="network">Network</h4>
+<p><img src="img/assets/network.png" alt="NetworkAyarlar&#x131;"></p>
+<h4 id="settings">Settings</h4>
+<p><img src="img/assets/settings.png" alt="Genel Ayarlar"></p>
+<h4 id="finished">Finished</h4>
+<p><img src="img/assets/finished.png" alt="Kurlumun Tamamlanmas&#x131;"></p>
+<h3 id="keyboard--ssh---repo---firewall-ayarlar&#x131;">Keyboard &amp; SSH &amp;  Repo  &amp; FireWall Ayarlar&#x131;</h3>
+<h4 id="keyboard">Keyboard:</h4>
+<pre><code class="lang-bash">   localectl <span class="hljs-built_in">set</span>-keymap tr
+</code></pre>
+<h4 id="ssh">SSH:</h4>
+<pre><code class="lang-bash">vi /etc/ssh/sshd_config
+</code></pre>
+<pre><code class="lang-text">#PermitRootLogin prohibit-password
+PermitRootLogin Yes
+</code></pre>
+<h4 id="repo">Repo:</h4>
+<pre><code class="lang-bash">vi /etc/yum.repos.d/mongodb.repo
+</code></pre>
+<pre><code class="lang-text">[mongodb]
+name=MongoDB Upstream Repository
+baseurl=https://repo.mongodb.org/yum/redhat/8Server/mongodb-org/4.4/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.4.asc
+</code></pre>
+<pre><code class="lang-text">systemctl  restart sshd
+</code></pre>
+<h3 id="install-mongodb">Install MongoDB</h3>
+<pre><code class="lang-text">yum install -y mongodb-org mongodb-org-tools mongodb-org-shell
+</code></pre>
+<h3 id="selinux-and-firewalld">SELinux and FirewallD</h3>
+<p>Security-Enhanced Linux</p>
+<pre><code class="lang-text">vi /etc/selinux/config
+</code></pre>
+<pre><code class="lang-text">#SELINUX=enforcing
+SELINUX=disabled
+</code></pre>
+<pre><code class="lang-text">systemctl  stop firewalld.service
+systemctl  disable firewalld.service
+</code></pre>
+<h3 id="start-mongodb">Start MongoDB</h3>
+<pre><code class="lang-text">sudo systemctl enable mongod.service
+sudo systemctl start mongod.service
+</code></pre>
+<pre><code class="lang-text">[root@fedora ~]# mongod --version
+db version v4.4.4
+Build Info: {
+    &quot;version&quot;: &quot;4.4.4&quot;,
+    &quot;gitVersion&quot;: &quot;8db30a63db1a9d84bdcad0c83369623f708e0397&quot;,
+    &quot;openSSLVersion&quot;: &quot;OpenSSL 1.1.1k  FIPS 25 Mar 2021&quot;,
+    &quot;modules&quot;: [],
+    &quot;allocator&quot;: &quot;tcmalloc&quot;,
+    &quot;environment&quot;: {
+        &quot;distmod&quot;: &quot;rhel80&quot;,
+        &quot;distarch&quot;: &quot;x86_64&quot;,
+        &quot;target_arch&quot;: &quot;x86_64&quot;
+    }
+}
+</code></pre>
+<h3 id="configure">Configure</h3>
+<pre><code class="lang-text">[root@fedora ~]# cat /etc/mongod.conf 
+# mongod.conf
+
+# for documentation of all options, see:
+#   http://docs.mongodb.org/manual/reference/configuration-options/
+
+# where to write logging data.
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+# Where and how to store data.
+storage:
+  dbPath: /var/lib/mongo
+  journal:
+    enabled: true
+#  engine:
+#  wiredTiger:
+
+# how the process runs
+processManagement:
+  fork: true  # fork and run in background
+  pidFilePath: /var/run/mongodb/mongod.pid  # location of pidfile
+  timeZoneInfo: /usr/share/zoneinfo
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 0.0.0.0  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
+
+
+#security:
+
+#operationProfiling:
+
+#replication:
+
+#sharding:
+
+## Enterprise-Only Options
+
+#auditLog:
+
+#snmp:
+</code></pre>
+<pre><code class="lang-bash">mongod --config /etc/mongod.conf
+</code></pre>
+<h3 id="mongo-compass">Mongo Compass</h3>
+<p><img src="img/assets/compass.png" alt="main page"></p>
+<p><img src="img/assets/compass2.png" alt="compass-2"></p>
+<p><img src="img/assets/compass3.png" alt="compass-3"></p>
+<script src="_gitbook_plugin_analytics.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="mongo-shell.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Mongo Shell - Find">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Mongo Training","description":"ozgurentegrasyon.com","customjs":["https://github.com/OEntegrasyon/TrainingMongoDB/tree/master/docs/gtag.js"],"level":"1.1","depth":1,"next":{"title":"Mongo Shell - Find","level":"1.2","depth":1,"path":"mongo-shell.md","ref":"mongo-shell.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-07-02T14:10:26.135Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-14T10:47:03.209Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-yametrika/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-gtm/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type='text/javascript'>
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter82390285 = new Ya.Metrika({"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"});
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//mc.yandex.ru/metrika/watch.js';
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks');
+    </script>
+    <noscript>
+        <div>
+            <img src="//mc.yandex.ru/watch/82390285" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
+
+    </body>
+</html>
+

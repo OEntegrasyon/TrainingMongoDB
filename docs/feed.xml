@@ -4,7 +4,7 @@
         <description><![CDATA[MongoDB Training Documents]]></description>
         <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 02 Jul 2021 16:36:24 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 14 Jul 2021 10:48:11 GMT</lastBuildDate>
         <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Özgür Mersin]]></author>
         <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
@@ -78,6 +78,12 @@
             <description><![CDATA[Aynı belgedeki alanları karşılaştıran sorgu ifadeleri oluşturmak için kullanılır.]]></description>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/expressive-query-operator.html</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/expressive-query-operator.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/mongo-auth.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/mongo-auth.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
     </channel>
