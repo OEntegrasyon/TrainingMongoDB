@@ -10,4 +10,5 @@
 <url> <loc>https://oentegrasyon.github.io/expressive-query-operator.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://oentegrasyon.github.io/mongo-auth.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://oentegrasyon.github.io/mongo-create-user.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://oentegrasyon.github.io/mongo-user-roles.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

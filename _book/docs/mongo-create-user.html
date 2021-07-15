@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Comparison Operators · GitBook</title>
+        <title>Mongodb Create User · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Sorgu operatörlerini kullanarak hızlı çözümler">
+        <meta name="description" content="Mongo Create USer & Role">
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -59,13 +59,11 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="logic-operators.html" />
     
-    
-    <link rel="prev" href="mongo-shell-delete.html" />
+    <link rel="prev" href="mongo-auth.html" />
     
 
-    <link rel="canonical" href="https://oentegrasyon.github.io/TrainingMongoDB/comparison-operators.html">
+    <link rel="canonical" href="https://oentegrasyon.github.io/TrainingMongoDB/mongo-create-user.html">
 
     <link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" title="Özgür Entegrasyon | MongoDB Tutorial" rel="alternate" type="application/rss+xml" />
 
@@ -176,7 +174,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="comparison-operators.html">
+        <li class="chapter " data-level="1.6" data-path="comparison-operators.html">
             
                 <a href="comparison-operators.html">
             
@@ -228,25 +226,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="mongo-create-user.html">
+        <li class="chapter active" data-level="1.10" data-path="mongo-create-user.html">
             
                 <a href="mongo-create-user.html">
             
                     
                     Mongodb Create User
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.11" data-path="mongo-user-roles.html">
-            
-                <a href="mongo-user-roles.html">
-            
-                    
-                    Mongo User Roles
             
                 </a>
             
@@ -284,7 +269,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Comparison Operators</a>
+        <a href="." >Mongodb Create User</a>
     </h1>
 </div>
 
@@ -299,85 +284,77 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="comparison-operators">Comparison Operators</h1>
-<h2 id="kar&#x15F;&#x131;la&#x15F;t&#x131;rma">Kar&#x15F;&#x131;la&#x15F;t&#x131;rma</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Operat&#xF6;r</th>
-<th style="text-align:left">A&#xE7;&#x131;klamas&#x131;</th>
-<th style="text-align:left">Sembol</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$eq</td>
-<td style="text-align:left">EQual to</td>
-<td style="text-align:left">=</td>
-</tr>
-<tr>
-<td style="text-align:left">$ne</td>
-<td style="text-align:left">Not Equal to</td>
-<td style="text-align:left"><strong>&#x2260;</strong></td>
-</tr>
-<tr>
-<td style="text-align:left">$gt</td>
-<td style="text-align:left">Greater Than</td>
-<td style="text-align:left">&gt;</td>
-</tr>
-<tr>
-<td style="text-align:left">$lt</td>
-<td style="text-align:left">Less Than</td>
-<td style="text-align:left">&lt;</td>
-</tr>
-<tr>
-<td style="text-align:left">$gte</td>
-<td style="text-align:left">Greater Than or Equal to</td>
-<td style="text-align:left">&#x2265;</td>
-</tr>
-<tr>
-<td style="text-align:left">$lte</td>
-<td style="text-align:left">Less Than or Equal to</td>
-<td style="text-align:left">&#x2264;</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>{&lt;field&gt;} :{ &lt;operator&gt;:&lt;value&gt;}}</p>
-</blockquote>
-<p><strong>Yolculuk s&#xFC;resinin</strong>(tripduration) 70 saniye veya daha az oldu&#x11F;u ve <strong>kullan&#x131;c&#x131;n&#x131;n t&#xFC;r&#xFC;n&#xFC;n</strong>(user type) Abone olmad&#x131;&#x11F;&#x131; t&#xFC;m belgeleri bulal&#x131;m:</p>
-<pre><code class="lang-text">use sample_training
-db.trips.find({ &quot;tripduration&quot;: { &quot;$lte&quot; : 70 },
-                &quot;usertype&quot;: { &quot;$ne&quot;: &quot;Subscriber&quot; } }).pretty()
+                                <h1 id="create-user">Create User</h1>
+<p>MongoDB&apos;de kullan&#x131;c&#x131; y&#xF6;neticisi olu&#x15F;turma, createUser y&#xF6;ntemi kullan&#x131;larak yap&#x131;l&#x131;r. A&#x15F;a&#x11F;&#x131;daki &#xF6;rnek bunun nas&#x131;l yap&#x131;labilece&#x11F;ini g&#xF6;stermektedir.</p>
+<pre><code class="lang-sh">use admin
+
+db.createUser(
+{    user: <span class="hljs-string">&quot;HasanPasa&quot;</span>,
+    <span class="hljs-built_in">pwd</span>: <span class="hljs-string">&quot;1773&quot;</span>,
+
+    roles:[{role: <span class="hljs-string">&quot;userAdminAnyDatabase&quot;</span> , db:<span class="hljs-string">&quot;admin&quot;</span>}]}
+    )
 </code></pre>
-<pre><code class="lang-text">{
-    &quot;_id&quot; : ObjectId(&quot;572bb8232b288919b68af7cd&quot;),
-    &quot;tripduration&quot; : 66,
-    &quot;start station id&quot; : 460,
-    &quot;start station name&quot; : &quot;S 4 St &amp; Wythe Ave&quot;,
-    &quot;end station id&quot; : 460,
-    &quot;end station name&quot; : &quot;S 4 St &amp; Wythe Ave&quot;,
-    &quot;bikeid&quot; : 23779,
-    &quot;usertype&quot; : &quot;Customer&quot;,
-    &quot;birth year&quot; : &quot;&quot;,
-    &quot;gender&quot; : 0,
-    &quot;start station location&quot; : {
-        &quot;type&quot; : &quot;Point&quot;,
-        &quot;coordinates&quot; : [
-            -73.96590294,
-            40.71285887
-        ]
-    },
-    &quot;end station location&quot; : {
-        &quot;type&quot; : &quot;Point&quot;,
-        &quot;coordinates&quot; : [
-            -73.96590294,
-            40.71285887
-        ]
-    },
-    &quot;start time&quot; : ISODate(&quot;2016-01-02T11:49:11Z&quot;),
-    &quot;stop time&quot; : ISODate(&quot;2016-01-02T11:50:18Z&quot;)
+<pre><code class="lang-text">Successfully added user: {
+    &quot;user&quot; : &quot;HasanPasa&quot;,
+    &quot;roles&quot; : [
+        {
+            &quot;role&quot; : &quot;userAdminAnyDatabase&quot;,
+            &quot;db&quot; : &quot;admin&quot;
+        }
+    ]
 }
+</code></pre>
+<p>&#x130;lk ad&#x131;m, olu&#x15F;turulmas&#x131; gereken &quot;kullan&#x131;c&#x131; ad&#x131;&quot; ve &quot;&#x15F;ifre&quot;nin belirlenmesidir.
+&#x130;kinci ad&#x131;m, kullan&#x131;c&#x131; i&#xE7;in bir rol atamakt&#x131;r. Veritaban&#x131; y&#xF6;neticisi olmas&#x131; gerekti&#x11F;inden, bu durumda &quot;userAdminAnyDatabase&quot; rol&#xFC;n&#xFC; atad&#x131;k.
+Bu rol, kullan&#x131;c&#x131;n&#x131;n MongoDB&apos;deki t&#xFC;m veritabanlar&#x131;nda y&#xF6;netici ayr&#x131;cal&#x131;klar&#x131;na sahip olmas&#x131;n&#x131; sa&#x11F;lar. db parametresi, bu kullan&#x131;c&#x131; i&#xE7;in bilgileri tutan MongoDB i&#xE7;indeki &#xF6;zel bir Meta veritaban&#x131; olan y&#xF6;netici veritaban&#x131;n&#x131; belirtir.</p>
+<pre><code class="lang-sh">
+db.system.users.find({},{user:1,roles:1})
+</code></pre>
+<pre><code class="lang-text">
+{ &quot;_id&quot; : &quot;admin.HasanPasa&quot;, &quot;user&quot; : &quot;HasanPasa&quot;, &quot;roles&quot; : [ { &quot;role&quot; : &quot;userAdminAnyDatabase&quot;, &quot;db&quot; : &quot;admin&quot; } ] }
+</code></pre>
+<h2 id="security-enable">Security Enable</h2>
+<p>MongoDb&apos;yi Durduruyoruz</p>
+<pre><code class="lang-sh">
+db.adminCommand( { shutdown: 1 } )
+</code></pre>
+<pre><code class="lang-text">
+mongod -f /etc/mongod.conf 
+about to fork child process, waiting until server is ready for connections.
+forked process: 1131
+child process started successfully, parent exiting
+</code></pre>
+<h2 id="test">Test</h2>
+<p>&#x15E;imdi &quot;mongo&quot; komutu ile giri&#x15F; yapal&#x131;m ve database&apos;leri g&#xF6;relim</p>
+<pre><code class="lang-text">MongoDB shell version v4.4.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb
+Implicit session: session { &quot;id&quot; : UUID(&quot;9a0c162c-fdd5-457b-a769-f977fad187a4&quot;) }
+MongoDB server version: 4.4.4
+&gt; show dbs;
+</code></pre>
+<p>Database&apos;ler g&#xF6;r&#xFC;lmeyecektir.</p>
+<h2 id="db-auth">DB AUTH</h2>
+<p>&#x15E;imdi Kullan&#x131;c&#x131; ad&#x131; ve &#x15F;ifresi ile giri&#x15F; yapal&#x131;m.</p>
+<pre><code class="lang-sh">
+db.auth(<span class="hljs-string">&quot;HasanPasa&quot;</span>,<span class="hljs-string">&quot;1773&quot;</span>)
+</code></pre>
+<pre><code class="lang-text">
+&gt; show dbs;
+admin               0.000GB
+config              0.000GB
+local               0.000GB
+sample_airbnb       0.051GB
+sample_analytics    0.009GB
+sample_geospatial   0.001GB
+sample_mflix        0.040GB
+sample_restaurants  0.006GB
+sample_training     0.032GB
+sample_weatherdata  0.002GB
+test
+</code></pre>
+<p>Yada</p>
+<pre><code class="lang-sh">mongo --port 27017  --authenticationDatabase <span class="hljs-string">&quot;admin&quot;</span> -u <span class="hljs-string">&quot;HasanPasa&quot;</span> -p <span class="hljs-string">&quot;1773&quot;</span>
 </code></pre>
 <script src="_gitbook_plugin_analytics.js"></script>
                                 
@@ -406,14 +383,10 @@ db.trips.find({ &quot;tripduration&quot;: { &quot;$lte&quot; : 70 },
 
             
                 
-                <a href="mongo-shell-delete.html" class="navigation navigation-prev " aria-label="Previous page: Mongo Shell - Delete">
+                <a href="mongo-auth.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Mongodb authentication">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="logic-operators.html" class="navigation navigation-next " aria-label="Next page: Logic Operators">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -422,7 +395,7 @@ db.trips.find({ &quot;tripduration&quot;: { &quot;$lte&quot; : 70 },
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Comparison Operators","description":"Sorgu operatörlerini kullanarak hızlı çözümler","level":"1.6","depth":1,"next":{"title":"Logic Operators","level":"1.7","depth":1,"path":"logic-operators.md","ref":"logic-operators.md","articles":[]},"previous":{"title":"Mongo Shell - Delete","level":"1.5","depth":1,"path":"mongo-shell-delete.md","ref":"mongo-shell-delete.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"comparison-operators.md","mtime":"2021-07-14T11:59:43.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T14:40:31.259Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mongodb Create User","description":"Mongo Create USer & Role","level":"1.10","depth":1,"previous":{"title":"Mongodb authentication","level":"1.9","depth":1,"path":"mongo-auth.md","ref":"mongo-auth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-create-user.md","mtime":"2021-07-14T15:44:46.565Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-14T15:45:34.090Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

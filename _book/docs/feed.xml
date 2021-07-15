@@ -4,7 +4,7 @@
         <description><![CDATA[MongoDB Training Documents]]></description>
         <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 14 Jul 2021 15:44:58 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 14 Jul 2021 15:45:37 GMT</lastBuildDate>
         <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Özgür Mersin]]></author>
         <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
@@ -87,6 +87,13 @@
 | Kimlik doğrulama, bir kullanıcının kimliğini doğrular | Yetkilendirme, doğrulanmış kullanıcıların kaynaklara ve işlemlere erişimini belirler |]]></description>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/mongo-auth.html</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/mongo-auth.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Create User]]></title>
+            <description><![CDATA[MongoDB'de kullanıcı yöneticisi oluşturma, createUser yöntemi kullanılarak yapılır. Aşağıdaki örnek bunun nasıl yapılabileceğini göstermektedir.]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/mongo-create-user.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/mongo-create-user.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
     </channel>

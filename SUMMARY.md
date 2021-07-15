@@ -10,4 +10,5 @@
 * [Expressive Query Operator](expressive-query-operator.md)
 * [Mongodb authentication](mongo-auth.md)
 * [Mongodb Create User](mongo-create-user.md)
+* [Mongo User Roles](mongo-user-roles.md)
 
