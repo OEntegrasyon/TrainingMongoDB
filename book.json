@@ -8,7 +8,8 @@
 				"analytics",
 				"theme-hqbook",
 				"head-append",
-				"livere"
+				"livere",
+				"add-js-css"
 				],
 	"pluginsConfig": {
 		"ga": {
@@ -85,7 +86,12 @@
                 "<script async src='https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662'></script>",
                 "<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'G-6LSR50Y662'); </script>"
             ]
-        }
+        },
+		"add-js-css": {
+			"js": [
+			  "gitbook/js/ga.js"
+			]
+		  }
 
 		
 	}
