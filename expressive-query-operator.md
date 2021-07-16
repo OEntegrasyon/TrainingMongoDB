@@ -54,14 +54,9 @@ db.trips.find({ "$expr": { "$and": [ { "$gt": [ "$tripduration", 1200 ]},
                        ]}}).count()
 ```
 
----
-**NOTE**
-
-$ bir operatörün kullanımını belirtir.
-
-$  alan değerini adresler
-
----
+> [!NOTE]
+> $ bir operatörün kullanımını belirtir.
+> $  alan değerini adresler.
 
 
 
