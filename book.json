@@ -48,8 +48,8 @@
 			"google": "G-6LSR50Y662"
 		},
 		"theme-hqbook":{
-            "favicon": "./docs/gitbook/images/favicon.ico",
-            "logo":"./docs/gitbook/images/logo/logo.png",
+            "favicon": "gitbook/images/favicon.ico",
+            "logo":"gitbook/images/logo/logo.png",
             "search-placeholder":"Search",
 			"copyButtons": true,
 			"copyLines": true,
@@ -61,7 +61,7 @@
                 "title": "flexible-linkcard",
                 "hrefUrl": "https://github.com/HaoqiangChen/gitbook-plugin-flexible-linkcard",
                 "target": "_blank",
-                "imgSrc": "./docs/gitbook/images/logo/logo.png",
+                "imgSrc": "gitbook/images/logo/logo.png",
                 "imgClass": "rect"
             }
         }
