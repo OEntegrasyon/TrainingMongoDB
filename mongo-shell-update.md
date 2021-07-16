@@ -27,7 +27,7 @@ db.zips.find({ "zip": "12534" }).pretty()
 
 ```
 
-#### $INC
+## $INC
 
 Bu Operatör pozitif ve negatif değerleri kabul eder. Alan yoksa, alanı  oluşturur ve alanı belirtilen değere ayarlar.
 
@@ -48,7 +48,7 @@ db.zips.updateMany({ "city": "HUDSON" }, { "$inc": { "pop": 10 } })
 { "acknowledged" : true, "matchedCount" : 16, "modifiedCount" : 16 }
 ```
 
-#### $SET
+## $SET
 
 Bu Operatör belirli bir değere sahip bir alanın değerini değiştirir.
 
@@ -75,7 +75,7 @@ Bu Operatör belirli bir değere sahip bir alanın değerini değiştirir.
 { "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
 ```
 
-#### $PUSH
+## $PUSH
 
 $push operatörü, bir diziye belirli bir değer ekler.
 
