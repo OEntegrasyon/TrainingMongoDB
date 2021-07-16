@@ -7,7 +7,8 @@
 				"canonical-link",
 				"analytics",
 				"theme-hqbook",
-				"head-append"
+				"head-append",
+				"livere"
 				],
 	"pluginsConfig": {
 		"ga": {
@@ -78,7 +79,13 @@
 			  "   gtag('config', 'G-6LSR50Y662');",
 			  "</SCRIPTTAG>"
 			]
-		  }
+		  },
+		  "insert-head-tag": {
+            "tags": [
+                "<script async src='https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662'></script>",
+                "<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'G-6LSR50Y662'); </script>"
+            ]
+        }
 
 		
 	}
