@@ -46,7 +46,25 @@
 		},
 		"analytics": {
 			"google": "G-6LSR50Y662"
-		}
+		},
+		"theme-hqbook":{
+            "favicon": "./favicon.ico",
+            "logo":"./logo.png",
+            "search-placeholder":"Search",
+			"copyButtons": true,
+			"copyLines": true,
+			"dragSplitter": true,
+            "hide-elements": [
+                ".summary .gitbook-link"
+            ],
+            "flexible-linkcard": {
+                "title": "flexible-linkcard",
+                "hrefUrl": "https://github.com/HaoqiangChen/gitbook-plugin-flexible-linkcard",
+                "target": "_blank",
+                "imgSrc": "./docs/gitbook/images/logo/logo.png",
+                "imgClass": "rect"
+            }
+        }
 		
 	}
 }
