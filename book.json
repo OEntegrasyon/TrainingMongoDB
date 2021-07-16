@@ -1,18 +1,14 @@
 {
-	"plugins": ["ga",
+	"plugins": [
 				"sitemap",
 				"rss",
 				"yametrika",
 				"gtm",
 				"canonical-link",
-				"analytics",
 				"theme-hqbook",
 				"head-append"
 				],
 	"pluginsConfig": {
-		"ga": {
-			"token": "G-6LSR50Y662"
-		},
 		"sitemap": {
             "hostname": "https://oentegrasyon.github.io/TrainingMongoDB/"
         },
@@ -44,9 +40,6 @@
         },
 		"canonical-link": {
 			"baseURL": "https://oentegrasyon.github.io/TrainingMongoDB"
-		},
-		"analytics": {
-			"google": "G-6LSR50Y662"
 		},
 		"theme-hqbook":{
             "favicon": "gitbook/images/favicon.ico",
