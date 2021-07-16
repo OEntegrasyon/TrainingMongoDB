@@ -6,7 +6,8 @@
 				"gtm",
 				"canonical-link",
 				"theme-hqbook",
-				"head-append"
+				"head-append",
+				"flexible-alerts"
 				],
 	"variables": {
 					"themeHqbook":{
@@ -61,14 +62,7 @@
 			"dragSplitter": true,
             "hide-elements": [
                 ".summary .gitbook-link"
-            ],
-            "flexible-linkcard": {
-                "title": "flexible-linkcard",
-                "hrefUrl": "https://github.com/HaoqiangChen/gitbook-plugin-flexible-linkcard",
-                "target": "_blank",
-                "imgSrc": "gitbook/images/logo/logo.png",
-                "imgClass": "rect"
-            }
+            ]
         },
 		"head-append": {
 			"code": [
@@ -82,6 +76,20 @@
 			  "   gtag('config', 'G-6LSR50Y662');",
 			  "</SCRIPTTAG>"
 			]
+		  },
+		  "flexible-alerts": {
+			"note": {
+			  "label": "NOT"
+			},
+			"tip": {
+			  "label": "İpucu"
+			},
+			"warning": {
+			  "label": "Uyarı"
+			},
+			"danger": {
+			  "label": "Dikkat"
+			}
 		  }
 
 		
