@@ -4,7 +4,7 @@
         <description><![CDATA[MongoDB Training Documents]]></description>
         <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 16 Jul 2021 14:25:07 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Jul 2021 14:57:58 GMT</lastBuildDate>
         <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Özgür Mersin]]></author>
         <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
@@ -105,8 +105,20 @@
         </item>
         <item>
             <title><![CDATA[No title]]></title>
-            <link>https://oentegrasyon.github.io/TrainingMongoDB/test.html</link>
-            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/test.html</guid>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-BackUp.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-BackUp.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Restore.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Restore.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
     </channel>

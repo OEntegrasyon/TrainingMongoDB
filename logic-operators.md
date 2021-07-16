@@ -35,9 +35,9 @@ description: $and $or $nor $not
 {"student_id":{"$gt":25,"$lt":100}}
 ```
 
-![{&quot;$and&quot;:\[{&quot;student\_id&quot;:{&quot;$gt&quot;:25}},{&quot;student\_id&quot;:{&quot;$lt&quot;:100}}\]}](img/assets/and.png)
+![{&quot;$and&quot;:\[{&quot;student\_id&quot;:{&quot;$gt&quot;:25}},{&quot;student\_id&quot;:{&quot;$lt&quot;:100}}\]}](gitbook/images/assets/and.png)
 
-![{&quot;student\_id&quot;:{&quot;$gt&quot;:25,&quot;$lt&quot;:100}}](img/assets/and2.png)
+![{&quot;student\_id&quot;:{&quot;$gt&quot;:25,&quot;$lt&quot;:100}}](gitbook/images/assets/and2.png)
 
 Varış veya Kalkış  havaalnı KZN kodlu ve Uçak Tipi CR2 veya A81 olan uçuşları bulalım.
 
