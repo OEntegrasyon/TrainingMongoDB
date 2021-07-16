@@ -50,7 +50,8 @@
 		"theme-hqbook":{
             "favicon": "gitbook/images/favicon.ico",
             "logo":"gitbook/images/logo/logo.png",
-            "search-placeholder":"Search",
+            "search-placeholder":"Search Text",
+			"searchBtn" : "Find!",
 			"copyButtons": true,
 			"copyLines": true,
 			"dragSplitter": true,
