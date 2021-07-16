@@ -12,6 +12,7 @@
     "jquery": "^3.0.0"
   },
   "devDependencies": {
+    "gitbook-plugin-theme-hqbook": "^1.1.0",
     "githon": "^3.3.10"
   }
 }

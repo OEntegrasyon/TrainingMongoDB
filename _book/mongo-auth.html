@@ -28,6 +28,10 @@
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-hqbook/theme.css">
+                
+            
         
 
     
@@ -89,16 +93,32 @@
     </script>
     
 <div class="book">
-    <div class="book-summary">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="" alt="logo">
+        </div>
+        <span class="title"></span>
+
+        <!-- Search -->
         
-            
 <div id="book-search-input" role="search">
     <input type="text" placeholder="Type to search" />
 </div>
 
+
+        <!-- Nav -->
+        <ul class="header-nav">
             
-                <nav role="navigation">
-                
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <!--<div class="book-summary-title">文档目录</div>-->
+        
+        
+        <nav role="navigation">
+            
 
 
 <ul class="summary">
@@ -267,16 +287,24 @@
 </ul>
 
 
-                </nav>
-            
+        </nav>
         
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <!--<div class="book-anchor-title">在这篇文章中:</div>-->
+        <div class="book-anchor-body">
+
+        </div>
     </div>
 
     <div class="book-body">
         
-            <div class="body-inner">
-                
-                    
+        <div class="body-inner">
+            
+            
 
 <div class="book-header" role="navigation">
     
@@ -291,15 +319,15 @@
 
 
 
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
 <div id="book-search-results">
     <div class="search-noresults">
     
-                                <section class="normal markdown-section">
-                                
-                                <table>
+                    <section class="normal markdown-section">
+                        
+                        <table>
 <thead>
 <tr>
 <th>Authentication</th>
@@ -341,9 +369,9 @@ db.createRole(
 <h2 id="mongo-quiz-2-database-user-authentication">Mongo Quiz-2 (Database User Authentication)</h2>
 <p><a href="https://forms.gle/gQarAxKWSjSdxNHNA" target="_blank">https://forms.gle/gQarAxKWSjSdxNHNA</a></p>
 <script src="_gitbook_plugin_analytics.js"></script>
-                                
-                                </section>
-                            
+                        
+                    </section>
+                    
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -360,30 +388,33 @@ db.createRole(
     </div>
 </div>
 
-                        </div>
-                    </div>
-                
+                </div>
             </div>
+            
+        </div>
 
-            
-                
-                <a href="expressive-query-operator.html" class="navigation navigation-prev " aria-label="Previous page: Expressive Query Operator">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="mongo-create-user.html" class="navigation navigation-next " aria-label="Next page: Mongodb Create User">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
+        
+        
+        <a href="expressive-query-operator.html"
+           class="navigation navigation-prev "
+           aria-label="Previous page: Expressive Query Operator">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        
+        
+        <a href="mongo-create-user.html"
+           class="navigation navigation-next "
+           aria-label="Next page: Mongodb Create User">
+            <i class="fa fa-angle-right"></i>
+        </a>
+        
+        
         
     </div>
-
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mongodb authentication","description":"Mongo AUTH","level":"1.9","depth":1,"next":{"title":"Mongodb Create User","level":"1.10","depth":1,"path":"mongo-create-user.md","ref":"mongo-create-user.md","articles":[]},"previous":{"title":"Expressive Query Operator","level":"1.8","depth":1,"path":"expressive-query-operator.md","ref":"expressive-query-operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-auth.md","mtime":"2021-07-14T13:52:03.137Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-15T14:40:31.259Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mongodb authentication","description":"Mongo AUTH","level":"1.9","depth":1,"next":{"title":"Mongodb Create User","level":"1.10","depth":1,"path":"mongo-create-user.md","ref":"mongo-create-user.md","articles":[]},"previous":{"title":"Expressive Query Operator","level":"1.8","depth":1,"path":"expressive-query-operator.md","ref":"expressive-query-operator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics","theme-hqbook"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"theme-hqbook":{"favicon":"./favicon.ico","logo":"../../images/home/logo.png","search-placeholder":"输入关键字搜索","copyButtons":true,"copyLines":true,"dragSplitter":true,"flexible-linkcard":{"title":"Converts blockquotes into beautiful linkcard, custom nice links","target":"_blank","hrefUrl":"../../demo/demo.html","imgSrc":"../../images/home/logo.png","imgClass":""}},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-auth.md","mtime":"2021-07-14T13:52:03.137Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T06:47:37.158Z"},"basePath":".","book":{"language":""}})
         });
     </script>
 </div>
@@ -432,6 +463,10 @@ db.createRole(
     
         
         <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-hqbook/theme.js"></script>
         
     
 

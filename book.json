@@ -5,7 +5,8 @@
 				"yametrika",
 				"gtm",
 				"canonical-link",
-				"analytics"
+				"analytics",
+				"theme-hqbook"
 				],
 	"pluginsConfig": {
 		"ga": {
