@@ -168,10 +168,6 @@ Aşağıdaki rollerin operasyonlarına ve tüm kaynaklarına birleştirilmiş er
 
 Bu  rol, sahibine veritabanındaki herhangi bir nesneye karşı herhangi bir işlem yapma hakkı verir.
 
----
-**NOTE**
-
-İstisnai durumlar dışında, bu rolü uygulamaları veya yöneticilere temsil eden kullanıcı nesnelerine atamayın.
-
----
+> [!DANGER|style:flat]
+> İstisnai durumlar dışında, bu rolü uygulamaları veya yöneticilere temsil eden kullanıcı nesnelerine atamayın.
 
