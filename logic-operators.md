@@ -18,12 +18,9 @@ description: $and $or $nor $not
 
 ![](gitbook/images/assets/nor.png)
 
----
-**NOTE**
+> [!TIP|style:flat|label:Örnek Sorgu|iconVisibility:hidden]
+> {$nor:\[{watlev:"always dry"},{watlev:"always under water/submerged"},{watlev:"covers and uncovers"}\]}
 
-{$nor:\[{watlev:"always dry"},{watlev:"always under water/submerged"},{watlev:"covers and uncovers"}\]}
-
----
 
 ### $and
 
@@ -39,7 +36,7 @@ description: $and $or $nor $not
 
 ![{&quot;student\_id&quot;:{&quot;$gt&quot;:25,&quot;$lt&quot;:100}}](gitbook/images/assets/and2.png)
 
-Varış veya Kalkış  havaalnı KZN kodlu ve Uçak Tipi CR2 veya A81 olan uçuşları bulalım.
+Varış veya Kalkış  havalimanı KZN kodlu ve Uçak Tipi CR2 veya A81 olan uçuşları bulalım.
 
 ```text
 use sample_training
@@ -307,19 +304,13 @@ db.routes.find({ "$and": [ { "$or" :[ { "dst_airport": "KZN" },
 ```
 
 
----
-**NOTE**
+> [!WARNING|style:flat]
+> aynı  operatörü bir sorguya birden fazla kez eklemeniz gerektiğinde $and operatörünü kullanmanız gerekmektedir.
 
-aynı  operatörü bir sorguya birden fazla kez eklemeniz gerektiğinde $and operatörünü kullanmanız gerekmektedir.
 
----
+> [!WARNING|style:flat]
+> $and, bir operatör belirtilmediğinde varsayılan operatör olarak kullanılır.
 
----
-**NOTE**
-
-$and, bir operatör belirtilmediğinde varsayılan operatör olarak kullanılır.
-
----
 
 ![](gitbook/images/assets/syntax.png)
 
