@@ -68,7 +68,7 @@
         },
 		"head-append": {
 			"code": [
-			  "<!-- Global site tag (gtag.js) - Google Analytics -->",
+			  "<!-- Global site tag (gtag.js) - Google Analytics Elvan -->",
 			  "<SCRIPTTAG async src=\"https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662\"></SCRIPTTAG>",
 			  "<SCRIPTTAG>",
 			  "  window.dataLayer = window.dataLayer || [];",
