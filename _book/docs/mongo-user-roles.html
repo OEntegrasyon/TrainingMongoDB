@@ -1,0 +1,580 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mongo User Roles · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Roles">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-hqbook/theme.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="mongo-create-user.html" />
+    
+
+    <link rel="canonical" href="https://oentegrasyon.github.io/TrainingMongoDB/mongo-user-roles.html">
+
+    <link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" title="Özgür Entegrasyon | MongoDB Tutorial" rel="alternate" type="application/rss+xml" />
+
+    </head>
+    <body>
+        
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K4LTD9P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K4LTD9P');
+    </script>
+    
+<div class="book">
+    <div class="header-inner">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="" alt="logo">
+        </div>
+        <span class="title"></span>
+
+        <!-- Search -->
+        
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+        <!-- Nav -->
+        <ul class="header-nav">
+            
+        </ul>
+    </div>
+
+    <div class="book-summary">
+        <!--<div class="book-summary-title">文档目录</div>-->
+        
+        
+        <nav role="navigation">
+            
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Mongo Training
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mongo-shell.html">
+            
+                <a href="mongo-shell.html">
+            
+                    
+                    Mongo Shell - Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="mongo-shell-insert.html">
+            
+                <a href="mongo-shell-insert.html">
+            
+                    
+                    Mongo Shell - Insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="mongo-shell-update.html">
+            
+                <a href="mongo-shell-update.html">
+            
+                    
+                    Mongo Shell - Update
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mongo-shell-delete.html">
+            
+                <a href="mongo-shell-delete.html">
+            
+                    
+                    Mongo Shell - Delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="comparison-operators.html">
+            
+                <a href="comparison-operators.html">
+            
+                    
+                    Comparison Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="logic-operators.html">
+            
+                <a href="logic-operators.html">
+            
+                    
+                    Logic Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="expressive-query-operator.html">
+            
+                <a href="expressive-query-operator.html">
+            
+                    
+                    Expressive Query Operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="mongo-auth.html">
+            
+                <a href="mongo-auth.html">
+            
+                    
+                    Mongodb authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="mongo-create-user.html">
+            
+                <a href="mongo-create-user.html">
+            
+                    
+                    Mongodb Create User
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="mongo-user-roles.html">
+            
+                <a href="mongo-user-roles.html">
+            
+                    
+                    Mongo User Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+        
+        
+    </div>
+
+    <!-- Content nav -->
+    <div class="book-anchor">
+        <!--<div class="book-anchor-title">在这篇文章中:</div>-->
+        <div class="book-anchor-body">
+
+        </div>
+    </div>
+
+    <div class="book-body">
+        
+        <div class="body-inner">
+            
+            
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Mongo User Roles</a>
+    </h1>
+</div>
+
+
+
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                    <section class="normal markdown-section">
+                        
+                        <h1 id="database-user-roles">Database User Roles</h1>
+<p>Her veritaban&#x131; a&#x15F;a&#x11F;&#x131;daki istemci rollerini i&#xE7;erir:</p>
+<h2 id="read">read</h2>
+<p>A&#x15F;a&#x11F;&#x131;daki s&#xFC;re&#xE7;lere okuma eri&#x15F;imi sa&#x11F;lar:</p>
+<ul>
+<li>changeStream<ul>
+<li>Oplog&apos;u takip etme karma&#x15F;&#x131;kl&#x131;&#x11F;&#x131; ve riski olmadan ger&#xE7;ek zamanl&#x131; veri de&#x11F;i&#x15F;ikliklerine eri&#x15F;mesine olanak sa&#x11F;lar.</li>
+</ul>
+</li>
+<li>collStats<ul>
+<li>Koleksiyonlar i&#xE7;in girilen komutlar&#x131;n istatisliklerini g&#xF6;steririr.</li>
+</ul>
+</li>
+<li>dbHash<ul>
+<li>db.runcommand() komutunun dbHash &#xE7;&#x131;kt&#x131;s&#x131;n&#x131;n md5 de&#x11F;erini g&#xF6;sterir.</li>
+</ul>
+</li>
+<li>dbStats<ul>
+<li>dbStats Komut verilen bir veritaban&#x131; i&#xE7;in depolama istatistiklerini g&#xF6;sterir. </li>
+</ul>
+</li>
+<li>find</li>
+<li>killCursors</li>
+<li>listIndexes</li>
+<li>listCollections<ul>
+<li>Bir veritaban&#x131;ndaki koleksiyonlar ve g&#xF6;r&#xFC;n&#xFC;mler hakk&#x131;nda bilgileri g&#xF6;sterir.</li>
+</ul>
+</li>
+</ul>
+<h2 id="readwrite">readWrite</h2>
+<p>Okuma rol&#xFC;n&#xFC;n t&#xFC;m ayr&#x131;cal&#x131;klar&#x131;n&#x131; ve ayr&#x131;ca  system.js koleksiyonundaki verileri de&#x11F;i&#x15F;tirme yetene&#x11F;i sa&#x11F;lar.</p>
+<ul>
+<li>collStats</li>
+<li>convertToCapped</li>
+<li>createCollection</li>
+<li>dbHash</li>
+<li>dbStats</li>
+<li>dropCollection</li>
+<li>createIndex</li>
+<li>dropIndex</li>
+<li>find</li>
+<li>insert</li>
+<li>killCursors</li>
+<li>listIndexes</li>
+<li>listCollections</li>
+<li>remove</li>
+<li>renameCollectionSameDB</li>
+<li>update</li>
+</ul>
+<h1 id="database-administration-roles">Database Administration Roles</h1>
+<p>Her veritaban&#x131; a&#x15F;a&#x11F;&#x131;daki veritaban&#x131; y&#xF6;netim rollerini i&#xE7;erir:</p>
+<h2 id="dbadmin">dbAdmin</h2>
+<p>Dizin olu&#x15F;turma ve istatistik toplama gibi y&#xF6;netim g&#xF6;revlerini ger&#xE7;ekle&#x15F;tirme yetene&#x11F;i sa&#x11F;lar. 
+Bu rol, kullan&#x131;c&#x131; ve rol y&#xF6;netimi i&#xE7;in ayr&#x131;cal&#x131;klar vermez.</p>
+<h2 id="dbowner">dbOwner</h2>
+<p>Veritaban&#x131; sahibi, veritaban&#x131; &#xFC;zerinde herhangi bir y&#xF6;netim eylemi ger&#xE7;ekle&#x15F;tirebilir. 
+Bu rol, readWrite, dbAdmin ve userAdmin rolleri taraf&#x131;ndan verilen ayr&#x131;cal&#x131;klar&#x131; birle&#x15F;tirir.</p>
+<h2 id="useradmin">userAdmin</h2>
+<p>Ge&#xE7;erli veritaban&#x131;nda roller ve kullan&#x131;c&#x131;lar olu&#x15F;turma ve de&#x11F;i&#x15F;tirme yetene&#x11F;i sa&#x11F;lar. userAdmin rol&#xFC;, kullan&#x131;c&#x131;lar&#x131;n kendileri de dahil olmak &#xFC;zere herhangi bir kullan&#x131;c&#x131;ya herhangi bir ayr&#x131;cal&#x131;k vermelerine izin verdi&#x11F;inden, rol ayr&#x131;ca dolayl&#x131; olarak veritaban&#x131;na veya y&#xF6;netici veritaban&#x131; kapsam&#x131;na al&#x131;nm&#x131;&#x15F;sa cluster&apos;a s&#xFC;per kullan&#x131;c&#x131; eri&#x15F;imi sa&#x11F;lar.</p>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>userAdmin rol&#xFC; vermenin g&#xFC;venlikle ilgili sonu&#xE7;lar&#x131;n&#x131; anlamak &#xF6;nemlidir:
+bir veritaban&#x131; i&#xE7;in bu role sahip bir kullan&#x131;c&#x131;, kendisine bu veritaban&#x131;nda herhangi bir ayr&#x131;cal&#x131;k atayabilir. 
+Y&#xF6;netici veritaban&#x131;nda userAdmin rol&#xFC;n&#xFC;n verilmesi, bir k&#xFC;meye dolayl&#x131; olarak s&#xFC;per kullan&#x131;c&#x131; eri&#x15F;imi sa&#x11F;lad&#x131;&#x11F;&#x131; i&#xE7;in daha fazla g&#xFC;venlik etkisine sahiptir. 
+Y&#xF6;netici kapsam&#x131; ile, userAdmin rol&#xFC;ne sahip bir kullan&#x131;c&#x131;, userAdminAnyDatabase dahil olmak &#xFC;zere cluster &#xE7;ap&#x131;nda roller veya ayr&#x131;cal&#x131;klar verebilir.</p>
+<hr>
+<h1 id="cluster-administration-roles">Cluster Administration Roles</h1>
+<p>Y&#xF6;netici veritaban&#x131;, yaln&#x131;zca tek bir veritaban&#x131; yerine t&#xFC;m sistemi y&#xF6;netmek i&#xE7;in a&#x15F;a&#x11F;&#x131;daki rolleri i&#xE7;erir. 
+Bu roller, cluster ve replica set y&#xF6;netim i&#x15F;levlerini i&#xE7;erir ancak bunlarla s&#x131;n&#x131;rl&#x131; de&#x11F;ildir.</p>
+<h2 id="clusteradmin">clusterAdmin</h2>
+<p>Bu rol, clusterManager, clusterMonitor ve hostManager rolleri taraf&#x131;ndan verilen ayr&#x131;cal&#x131;klar&#x131; birle&#x15F;tirir. 
+Ayr&#x131;ca bu rol, dropDatabase eylemini sa&#x11F;lar.</p>
+<h2 id="clustermanager">clusterManager</h2>
+<p> Bu role sahip bir kullan&#x131;c&#x131;, s&#x131;ras&#x131;yla par&#xE7;alama ve &#xE7;o&#x11F;altmada kullan&#x131;lan yap&#x131;land&#x131;rma ve yerel veritabanlar&#x131;na eri&#x15F;ebilir.</p>
+<h2 id="clustermonitor">clusterMonitor</h2>
+<p> MongoDB Bulut Y&#xF6;neticisi gibi izleme ara&#xE7;lar&#x131;na salt okunur eri&#x15F;im sa&#x11F;lar.</p>
+<h2 id="hostmanager">hostManager</h2>
+<p> Sunucular&#x131; izleme ve y&#xF6;netme yetene&#x11F;i sa&#x11F;lar.</p>
+<h1 id="backup-and-restoration-roles">Backup and Restoration Roles</h1>
+<p>Verileri yedeklemek ve geri y&#xFC;klemek i&#xE7;in a&#x15F;a&#x11F;&#x131;daki rolleri i&#xE7;erir:</p>
+<h2 id="backup">backup</h2>
+<p>Verileri yedeklemek i&#xE7;in gereken minimum ayr&#x131;cal&#x131;klar&#x131; sa&#x11F;lar. 
+Bu rol, MongoDB Cloud Manager yedekleme arac&#x131;s&#x131;n&#x131;, Ops Manager yedekleme arac&#x131;s&#x131;n&#x131; kullanmak veya mongodump kullanmak i&#xE7;in yeterli ayr&#x131;cal&#x131;klar sa&#x11F;lar.</p>
+<h2 id="restore">restore</h2>
+<p>Veriler system.profile toplama verilerini i&#xE7;ermiyorsa ve mongorestore&apos;u --oplogReplay se&#xE7;ene&#x11F;i olmadan &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;rsan&#x131;z, yedeklerden verileri geri y&#xFC;klemek i&#xE7;in gerekli ayr&#x131;cal&#x131;klar&#x131; sa&#x11F;lar.</p>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>Yedekleme verileri system.profile toplama verilerini i&#xE7;eriyorsa veya --oplogReplay ile &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;yorsan&#x131;z, ek ayr&#x131;cal&#x131;klara ihtiyac&#x131;n&#x131;z vard&#x131;r.</p>
+<hr>
+<h1 id="all-database-roles">All-Database Roles</h1>
+<p> T&#xFC;m veritabanlar&#x131; i&#xE7;in ge&#xE7;erli olan ayr&#x131;cal&#x131;klar sa&#x11F;lar.</p>
+<h2 id="readanydatabase">readAnyDatabase</h2>
+<p>Yerel ve yap&#x131;land&#x131;rma d&#x131;&#x15F;&#x131;ndaki t&#xFC;m veritabanlar&#x131;nda okunanla ayn&#x131; salt okunur ayr&#x131;cal&#x131;klar&#x131; sa&#x11F;lar. 
+Bu rol ayr&#x131;ca cluster  &#xFC;zerinde listDatabases eylemini sa&#x11F;lar.</p>
+<h2 id="readwriteanydatabase">readWriteAnyDatabase</h2>
+<p>Local ve yap&#x131;land&#x131;rma d&#x131;&#x15F;&#x131;ndaki t&#xFC;m veritabanlar&#x131;nda readWrite ile ayn&#x131; ayr&#x131;cal&#x131;klar&#x131; sa&#x11F;lar. 
+Bu rol ayr&#x131;ca bir b&#xFC;t&#xFC;n olarak k&#xFC;me &#xFC;zerinde listDatabases eylemini sa&#x11F;lar.</p>
+<h2 id="useradminanydatabase">userAdminAnyDatabase</h2>
+<p>Local ve yap&#x131;land&#x131;rma d&#x131;&#x15F;&#x131;ndaki t&#xFC;m veritabanlar&#x131;nda userAdmin olarak kullan&#x131;c&#x131; y&#xF6;netimi i&#x15F;lemlerine ayn&#x131; eri&#x15F;imi sa&#x11F;lar.</p>
+<h2 id="dbadminanydatabase">dbAdminAnyDatabase</h2>
+<p>Yerel ve yap&#x131;land&#x131;rma d&#x131;&#x15F;&#x131;ndaki t&#xFC;m veritabanlar&#x131;nda dbAdmin ile ayn&#x131; ayr&#x131;cal&#x131;klar&#x131; sa&#x11F;lar.</p>
+<h1 id="superuser-roles">Superuser Roles</h1>
+<p>Birka&#xE7; rol, dolayl&#x131; veya do&#x11F;rudan sistem genelinde s&#xFC;per kullan&#x131;c&#x131; eri&#x15F;imi sa&#x11F;lar. 
+A&#x15F;a&#x11F;&#x131;daki roller, herhangi bir kullan&#x131;c&#x131;ya herhangi bir veritaban&#x131;nda herhangi bir ayr&#x131;cal&#x131;k atama yetene&#x11F;i sa&#x11F;lar; 
+bu rollerden birine sahip kullan&#x131;c&#x131;lar&#x131;n herhangi bir veritaban&#x131;nda kendilerine herhangi bir ayr&#x131;cal&#x131;k atayabilecekleri anlam&#x131;na gelir: 
+dbOwner rol&#xFC;, admin veritab&#x131;nda verildi&#x11F;inde
+userAdmin rol&#xFC;, admin veritab&#x131;nda verildi&#x11F;inde
+userAdminAnyDatabase rol&#xFC;</p>
+<h2 id="root">root</h2>
+<p>A&#x15F;a&#x11F;&#x131;daki rollerin operasyonlar&#x131;na ve t&#xFC;m kaynaklar&#x131;na birle&#x15F;tirilmi&#x15F; eri&#x15F;im sa&#x11F;lar: </p>
+<ul>
+<li>readWriteAnyDatabase </li>
+<li>dbAdminAnyDatabase </li>
+<li>userAdminAnyDatabase </li>
+<li>clusterAdmin</li>
+<li>restore</li>
+<li>backup</li>
+</ul>
+<h1 id="internal-role">Internal Role</h1>
+<h2 id="system">__system</h2>
+<p>Bu  rol, sahibine veritaban&#x131;ndaki herhangi bir nesneye kar&#x15F;&#x131; herhangi bir i&#x15F;lem yapma hakk&#x131; verir.</p>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>&#x130;stisnai durumlar d&#x131;&#x15F;&#x131;nda, bu rol&#xFC; uygulamalar&#x131; veya y&#xF6;neticilere temsil eden kullan&#x131;c&#x131; nesnelerine atamay&#x131;n.</p>
+<hr>
+<script src="_gitbook_plugin_analytics.js"></script>
+                        
+                    </section>
+                    
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+        <a href="mongo-create-user.html"
+           class="navigation navigation-prev navigation-unique"
+           aria-label="Previous page: Mongodb Create User">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        
+        
+        
+        
+    </div>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Mongo User Roles","description":"Roles","level":"1.11","depth":1,"previous":{"title":"Mongodb Create User","level":"1.10","depth":1,"path":"mongo-create-user.md","ref":"mongo-create-user.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["ga","sitemap","rss","yametrika","gtm","canonical-link","analytics","theme-hqbook"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"analytics":{"google":"G-6LSR50Y662"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"theme-hqbook":{"favicon":"gitbook/images/favicon.ico","logo":"gitbook/images/logo/logo.png","search-placeholder":"Type to Search","copyButtons":true,"copyLines":true,"dragSplitter":true,"flexible-linkcard":{"title":"flexible-linkcard","target":"_blank","hrefUrl":"https://github.com/HaoqiangChen/gitbook-plugin-flexible-linkcard","imgSrc":"gitbook/images/logo/logo.png","imgClass":"rect"},"hide-elements":[".summary .gitbook-link"]},"ga":{"configuration":"auto","token":"G-6LSR50Y662"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mongo-user-roles.md","mtime":"2021-07-15T14:40:16.121Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T09:03:11.873Z"},"basePath":".","book":{"language":""}})
+        });
+    </script>
+</div>
+
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-yametrika/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-gtm/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-hqbook/theme.js"></script>
+        
+    
+
+    <script type='text/javascript'>
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter82390285 = new Ya.Metrika({"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"});
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName('script')[0],
+                s = d.createElement('script'),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//mc.yandex.ru/metrika/watch.js';
+            if (w.opera == '[object Opera]') {
+                d.addEventListener('DOMContentLoaded', f, false);
+            } else {
+                f();
+            }
+        })(document, window, 'yandex_metrika_callbacks');
+    </script>
+    <noscript>
+        <div>
+            <img src="//mc.yandex.ru/watch/82390285" style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
+
+    </body>
+</html>
+

@@ -8,7 +8,6 @@
 				"analytics",
 				"theme-hqbook",
 				"head-append",
-				"livere",
 				"add-js-css"
 				],
 	"pluginsConfig": {
@@ -89,7 +88,7 @@
         },
 		"add-js-css": {
 			"js": [
-			  "gitbook/js/ga.js"
+			  "docs/gitbook/js/ga.js"
 			]
 		  }
 
