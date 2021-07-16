@@ -6,7 +6,8 @@
 				"gtm",
 				"canonical-link",
 				"analytics",
-				"theme-hqbook"
+				"theme-hqbook",
+				"head-append"
 				],
 	"pluginsConfig": {
 		"ga": {
@@ -64,6 +65,21 @@
                 "imgSrc": "gitbook/images/logo/logo.png",
                 "imgClass": "rect"
             }
-        }
+        },
+		"head-append": {
+			"code": [
+			  "<!-- Global site tag (gtag.js) - Google Analytics -->",
+			  "<SCRIPTTAG async src=\"https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662\"></SCRIPTTAG>",
+			  "<SCRIPTTAG>",
+			  "  window.dataLayer = window.dataLayer || [];",
+			  "  function gtag(){dataLayer.push(arguments);}",
+			  "  gtag('js', new Date());",
+			  "",
+			  "   gtag('config', 'G-6LSR50Y662');",
+			  "</SCRIPTTAG>"
+			]
+		  }
+
+		
 	}
 }
