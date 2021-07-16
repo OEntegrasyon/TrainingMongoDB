@@ -48,8 +48,8 @@
 			"google": "G-6LSR50Y662"
 		},
 		"theme-hqbook":{
-            "favicon": "./favicon.ico",
-            "logo":"./logo.png",
+            "favicon": "./docs/gitbook/images/favicon.ico",
+            "logo":"./docs/gitbook/images/logo/logo.png",
             "search-placeholder":"Search",
 			"copyButtons": true,
 			"copyLines": true,
