@@ -8,12 +8,9 @@ description: Mongo AUTH
 
 MongoDB, kullanıcılar için erişimi belirlemek için rol tabanlı erişim denetimi (RBAC) kullanır.
 
----
-**NOTE**
+> [!TIP|style:flat]
+> Rol tabanlı erişim denetimi (RBAC), bir kişinin bir işteki rolüne dayanan bir erişim güvenliği yöntemidir. Rol tabanlı erişim kontrolü, güvenliği sağlamanın bir yoludur çünkü yalnızca > > çalışanların işlerini yapmak için ihtiyaç duydukları bilgilere erişmelerine izin verirken, kendileriyle ilgili olmayan ek bilgilere erişmelerini engeller. Bir çalışanın rolü kendisine verilen izinleri belirler ve daha düşük düzeyli çalışanların hassas bilgilere erişememelerini veya üst düzey görevler gerçekleştirememelerini sağlar.
 
-Rol tabanlı erişim denetimi (RBAC), bir kişinin bir işteki rolüne dayanan bir erişim güvenliği yöntemidir. Rol tabanlı erişim kontrolü, güvenliği sağlamanın bir yoludur çünkü yalnızca çalışanların işlerini yapmak için ihtiyaç duydukları bilgilere erişmelerine izin verirken, kendileriyle ilgili olmayan ek bilgilere erişmelerini engeller. Bir çalışanın rolü kendisine verilen izinleri belirler ve daha düşük düzeyli çalışanların hassas bilgilere erişememelerini veya üst düzey görevler gerçekleştirememelerini sağlar.
-
----
 
 # Create User
 
