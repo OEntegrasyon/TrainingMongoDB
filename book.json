@@ -8,6 +8,17 @@
 				"theme-hqbook",
 				"head-append"
 				],
+	"variables": {
+					"themeHqbook":{
+						"nav":[
+							{
+								"url": "http://ozgurentegrasyon.com/",
+								"target": "_blank",
+								"name": "Özgür Entegrasyon Offical"
+							}
+						]
+					}
+				},
 	"pluginsConfig": {
 		"sitemap": {
             "hostname": "https://oentegrasyon.github.io/TrainingMongoDB/"

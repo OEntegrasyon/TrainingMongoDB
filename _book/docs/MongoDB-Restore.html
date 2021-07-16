@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Mongo Training · GitBook</title>
+        <title>MongoDB Restore · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="ozgurentegrasyon.com">
+        <meta name="description" content="MongoDB Restore">
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -64,8 +64,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="mongo-shell.html" />
+    <link rel="next" href="MongoDB-Replica.html" />
     
+    
+    <link rel="prev" href="MongoDB-BackUp.html" />
     
 
 <!-- Global site tag (gtag.js) - Google Analytics Elvan -->
@@ -87,7 +89,7 @@
   gtag('config', 'G-6LSR50Y662');
 </script>
 
-    <link rel="canonical" href="https://oentegrasyon.github.io/TrainingMongoDB/">
+    <link rel="canonical" href="https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Restore.html">
 
     <link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" title="Özgür Entegrasyon | MongoDB Tutorial" rel="alternate" type="application/rss+xml" />
 
@@ -127,9 +129,7 @@
 
         <!-- Nav -->
         <ul class="header-nav">
-            <li>
-                <a href="http://ozgurentegrasyon.com/" target="_blank">Özgür Entegrasyon Offical</a>
-            </li>
+            
         </ul>
     </div>
 
@@ -151,7 +151,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -307,7 +307,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="MongoDB-Restore.html">
+        <li class="chapter active" data-level="1.13" data-path="MongoDB-Restore.html">
             
                 <a href="MongoDB-Restore.html">
             
@@ -371,7 +371,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Mongo Training</a>
+        <a href="." >MongoDB Restore</a>
     </h1>
 </div>
 
@@ -386,131 +386,7 @@
     
                     <section class="normal markdown-section">
                         
-                        <h1 id="mongo-training">Mongo Training</h1>
-<h2 id="install-vm">Install VM</h2>
-<ul>
-<li>OS : <a href="https://download.fedoraproject.org/pub/fedora/linux/releases/34/Server/x86_64/iso/Fedora-Server-dvd-x86_64-34-1.2.iso" target="_blank">Fedora 34 Server </a></li>
-<li>Cpu: 2 sockets</li>
-<li>Ram: 2048 MB</li>
-<li>Disk: 20 GB (LVM)</li>
-<li>Network: NAT &amp; Bridge</li>
-</ul>
-<h4 id="disk"><strong>Disk</strong></h4>
-<p><img src="gitbook/images/assets/disk.png" alt="Disk Ayarlar&#x131;"></p>
-<h4 id="network">Network</h4>
-<p><img src="gitbook/images/assets/network.png" alt="NetworkAyarlar&#x131;"></p>
-<h4 id="settings">Settings</h4>
-<p><img src="gitbook/images/assets/settings.png" alt="Genel Ayarlar"></p>
-<h4 id="finished">Finished</h4>
-<p><img src="gitbook/images/assets/finished.png" alt="Kurlumun Tamamlanmas&#x131;"></p>
-<h3 id="keyboard--ssh---repo---firewall-ayarlar&#x131;">Keyboard &amp; SSH &amp;  Repo  &amp; FireWall Ayarlar&#x131;</h3>
-<h4 id="keyboard">Keyboard:</h4>
-<pre><code class="lang-bash">   localectl <span class="hljs-built_in">set</span>-keymap tr
-</code></pre>
-<h4 id="ssh">SSH:</h4>
-<pre><code class="lang-bash">vi /etc/ssh/sshd_config
-</code></pre>
-<pre><code class="lang-text">#PermitRootLogin prohibit-password
-PermitRootLogin Yes
-</code></pre>
-<h4 id="repo">Repo:</h4>
-<pre><code class="lang-bash">vi /etc/yum.repos.d/mongodb.repo
-</code></pre>
-<pre><code class="lang-text">[mongodb]
-name=MongoDB Upstream Repository
-baseurl=https://repo.mongodb.org/yum/redhat/8Server/mongodb-org/4.4/x86_64/
-gpgcheck=1
-enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-4.4.asc
-</code></pre>
-<pre><code class="lang-text">systemctl  restart sshd
-</code></pre>
-<h3 id="install-mongodb">Install MongoDB</h3>
-<pre><code class="lang-text">yum install -y mongodb-org mongodb-org-tools mongodb-org-shell
-</code></pre>
-<h3 id="selinux-and-firewalld">SELinux and FirewallD</h3>
-<p>Security-Enhanced Linux</p>
-<pre><code class="lang-text">vi /etc/selinux/config
-</code></pre>
-<pre><code class="lang-text">#SELINUX=enforcing
-SELINUX=disabled
-</code></pre>
-<pre><code class="lang-text">systemctl  stop firewalld.service
-systemctl  disable firewalld.service
-</code></pre>
-<h3 id="start-mongodb">Start MongoDB</h3>
-<pre><code class="lang-text">sudo systemctl enable mongod.service
-sudo systemctl start mongod.service
-</code></pre>
-<pre><code class="lang-text">[root@fedora ~]# mongod --version
-db version v4.4.4
-Build Info: {
-    &quot;version&quot;: &quot;4.4.4&quot;,
-    &quot;gitVersion&quot;: &quot;8db30a63db1a9d84bdcad0c83369623f708e0397&quot;,
-    &quot;openSSLVersion&quot;: &quot;OpenSSL 1.1.1k  FIPS 25 Mar 2021&quot;,
-    &quot;modules&quot;: [],
-    &quot;allocator&quot;: &quot;tcmalloc&quot;,
-    &quot;environment&quot;: {
-        &quot;distmod&quot;: &quot;rhel80&quot;,
-        &quot;distarch&quot;: &quot;x86_64&quot;,
-        &quot;target_arch&quot;: &quot;x86_64&quot;
-    }
-}
-</code></pre>
-<h3 id="configure">Configure</h3>
-<pre><code class="lang-text">[root@fedora ~]# cat /etc/mongod.conf 
-# mongod.conf
-
-# for documentation of all options, see:
-#   http://docs.mongodb.org/manual/reference/configuration-options/
-
-# where to write logging data.
-systemLog:
-  destination: file
-  logAppend: true
-  path: /var/log/mongodb/mongod.log
-
-# Where and how to store data.
-storage:
-  dbPath: /var/lib/mongo
-  journal:
-    enabled: true
-#  engine:
-#  wiredTiger:
-
-# how the process runs
-processManagement:
-  fork: true  # fork and run in background
-  pidFilePath: /var/run/mongodb/mongod.pid  # location of pidfile
-  timeZoneInfo: /usr/share/zoneinfo
-
-# network interfaces
-net:
-  port: 27017
-  bindIp: 0.0.0.0  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
-
-
-#security:
-
-#operationProfiling:
-
-#replication:
-
-#sharding:
-
-## Enterprise-Only Options
-
-#auditLog:
-
-#snmp:
-</code></pre>
-<pre><code class="lang-bash">mongod --config /etc/mongod.conf
-</code></pre>
-<h3 id="mongo-compass">Mongo Compass</h3>
-<p><img src="gitbook/images/assets/compass.png" alt="main page"></p>
-<p><img src="gitbook/images/assets/compass2.png" alt="compass-2"></p>
-<p><img src="gitbook/images/assets/compass3.png" alt="compass-3"></p>
-
+                        
                         
                     </section>
                     
@@ -537,10 +413,16 @@ net:
 
         
         
+        <a href="MongoDB-BackUp.html"
+           class="navigation navigation-prev "
+           aria-label="Previous page: MongoDB Back-Up">
+            <i class="fa fa-angle-left"></i>
+        </a>
         
-        <a href="mongo-shell.html"
-           class="navigation navigation-next navigation-unique"
-           aria-label="Next page: Mongo Shell - Find">
+        
+        <a href="MongoDB-Replica.html"
+           class="navigation navigation-next "
+           aria-label="Next page: MongoDB Replica Set">
             <i class="fa fa-angle-right"></i>
         </a>
         
@@ -550,7 +432,7 @@ net:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mongo Training","description":"ozgurentegrasyon.com","level":"1.1","depth":1,"next":{"title":"Mongo Shell - Find","level":"1.2","depth":1,"path":"mongo-shell.md","ref":"mongo-shell.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeHqbook":{"nav":[{"url":"http://ozgurentegrasyon.com/","target":"_blank","name":"Özgür Entegrasyon Offical"}]}},"plugins":["sitemap","rss","yametrika","gtm","canonical-link","theme-hqbook","head-append"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"head-append":{"code":["<!-- Global site tag (gtag.js) - Google Analytics Elvan -->","<SCRIPTTAG async src=\"https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662\"></SCRIPTTAG>","<SCRIPTTAG>","  window.dataLayer = window.dataLayer || [];","  function gtag(){dataLayer.push(arguments);}","  gtag('js', new Date());","","   gtag('config', 'G-6LSR50Y662');","</SCRIPTTAG>"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"theme-hqbook":{"favicon":"gitbook/images/favicon.ico","logo":"gitbook/images/logo/logo.png","search-placeholder":"Type to Search","copyButtons":true,"copyLines":true,"dragSplitter":true,"flexible-linkcard":{"title":"flexible-linkcard","target":"_blank","hrefUrl":"https://github.com/HaoqiangChen/gitbook-plugin-flexible-linkcard","imgSrc":"gitbook/images/logo/logo.png","imgClass":"rect"},"hide-elements":[".summary .gitbook-link"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2021-07-16T13:32:35.849Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T15:06:01.559Z"},"basePath":".","book":{"language":""}})
+            gitbook.page.hasChanged({"page":{"title":"MongoDB Restore","description":"MongoDB Restore","level":"1.13","depth":1,"next":{"title":"MongoDB Replica Set","level":"1.14","depth":1,"path":"MongoDB-Replica.md","ref":"MongoDB-Replica.md","articles":[]},"previous":{"title":"MongoDB Back-Up","level":"1.12","depth":1,"path":"MongoDB-BackUp.md","ref":"MongoDB-BackUp.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["sitemap","rss","yametrika","gtm","canonical-link","theme-hqbook","head-append"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"head-append":{"code":["<!-- Global site tag (gtag.js) - Google Analytics Elvan -->","<SCRIPTTAG async src=\"https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662\"></SCRIPTTAG>","<SCRIPTTAG>","  window.dataLayer = window.dataLayer || [];","  function gtag(){dataLayer.push(arguments);}","  gtag('js', new Date());","","   gtag('config', 'G-6LSR50Y662');","</SCRIPTTAG>"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"theme-hqbook":{"favicon":"gitbook/images/favicon.ico","logo":"gitbook/images/logo/logo.png","search-placeholder":"Type to Search","copyButtons":true,"copyLines":true,"dragSplitter":true,"flexible-linkcard":{"title":"flexible-linkcard","target":"_blank","hrefUrl":"https://github.com/HaoqiangChen/gitbook-plugin-flexible-linkcard","imgSrc":"gitbook/images/logo/logo.png","imgClass":"rect"},"hide-elements":[".summary .gitbook-link"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MongoDB-Restore.md","mtime":"2021-07-16T14:57:45.061Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T14:57:55.172Z"},"basePath":".","book":{"language":""}})
         });
     </script>
 </div>
