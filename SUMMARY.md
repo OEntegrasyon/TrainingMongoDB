@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Mongo Training](README.md)
+* [Install MongoDB](README.md)
 * [Mongo Shell - Find](mongo-shell.md)
 * [Mongo Shell - Insert](mongo-shell-insert.md)
 * [Mongo Shell - Update](mongo-shell-update.md)
@@ -14,6 +14,6 @@
 * [MongoDB Back-Up](MongoDB-BackUp.md)
 * [MongoDB Restore](MongoDB-Restore.md)
 * [MongoDB Replica Set](MongoDB-Replica.md)
-* [Çözüm Notları](Notlar.md)
+* [Solution Notes](Notlar.md)
 
 
