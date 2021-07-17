@@ -14,5 +14,6 @@
 * [MongoDB Back-Up](MongoDB-BackUp.md)
 * [MongoDB Restore](MongoDB-Restore.md)
 * [MongoDB Replica Set](MongoDB-Replica.md)
+* [Çözüm Notları](Notlar.md)
 
 

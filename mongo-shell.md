@@ -18,7 +18,11 @@ description: BSON&JSON
 
 ### Sample Data Restore
 
-['Simple Data'](https://erelbi.github.io/mongodb\_sample\_data/)
+Aşağıdaki link üzerinden eğitim için kullanacağımız örnek datalara ulaşabilirsiniz.
+
+['Sample Data Page'](https://erelbi.github.io/mongodb_sample_data/)
+
+___
 
 ```text
 show dbs;

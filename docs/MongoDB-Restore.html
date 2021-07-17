@@ -339,6 +339,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.15" data-path="Notlar.html">
+            
+                <a href="Notlar.html">
+            
+                    
+                    Çözüm Notları
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -392,7 +405,37 @@
     
                     <section class="normal markdown-section">
                         
-                        
+                        <h1 id="restore">Restore</h1>
+<p>Yedekleme verilerini geri y&#xFC;klemek i&#xE7;in MongoDB&apos;nin mongorestore komutu kullan&#x131;l&#x131;r. Bu komut, yedekleme dizinindeki t&#xFC;m verileri geri y&#xFC;kler.</p>
+<pre><code class="lang-sh">mongorestore
+</code></pre>
+<p>mongorestore komutu a&#x15F;a&#x11F;&#x131;daki forma sahiptir:</p>
+<pre><code class="lang-sh">mongorestore &lt;opsiyonlar&gt; &lt;ba&#x11F;lant&#x131; ayarlar&#x131;&gt; &lt;i&#xE7;e aktar&#x131;m i&#xE7;<span class="hljs-keyword">in</span> dosya veya dizin&gt;
+</code></pre>
+<h2 id="gerekli-eri&#x15F;im">Gerekli Eri&#x15F;im</h2>
+<p>Eri&#x15F;im denetimi etkinle&#x15F;tirilmi&#x15F; bir MongoDB da&#x11F;&#x131;t&#x131;m&#x131;na verileri geri y&#xFC;klemek i&#xE7;in, veriler system.profile toplama verilerini i&#xE7;ermiyorsa ve --oplogReplay se&#xE7;ene&#x11F;i olmadan mongorestore &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;rsan&#x131;z, geri y&#xFC;kleme rol&#xFC; verileri yedeklerden geri y&#xFC;klemek i&#xE7;in gerekli ayr&#x131;cal&#x131;klar&#x131; sa&#x11F;lar.</p>
+<p>Yedekleme verileri system.profile toplama verilerini i&#xE7;eriyorsa veya mongorestore&apos;u --oplogReplay se&#xE7;ene&#x11F;iyle &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;yorsan&#x131;z, ek ayr&#x131;cal&#x131;klara ihtiyac&#x131;n&#x131;z vard&#x131;r:</p>
+<table>
+<thead>
+<tr>
+<th>system.profile</th>
+<th>--oplogReplay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yedekleme verileri system.profile toplama verilerini i&#xE7;eriyorsa ve hedef veritaban&#x131; system.profile koleksiyonunu i&#xE7;ermiyorsa, program asl&#x131;nda system.profile belgelerini geri y&#xFC;klemese bile mongorestore koleksiyonu olu&#x15F;turmaya &#xE7;al&#x131;&#x15F;&#x131;r.</td>
+<td>--oplogReplay ile &#xE7;al&#x131;&#x15F;t&#x131;rmak i&#xE7;in, anyResource &#xFC;zerinde anyAction olan kullan&#x131;c&#x131; tan&#x131;ml&#x131; bir rol olu&#x15F;turun.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="mongoimport">mongoimport</h1>
+<p>mongoimport arac&#x131;, mongoexport taraf&#x131;ndan olu&#x15F;turulan bir JSON, CSV  d&#x131;&#x15F;a aktar&#x131;m&#x131;ndan veya potansiyel olarak ba&#x15F;ka bir &#xFC;&#xE7;&#xFC;nc&#xFC; taraf d&#x131;&#x15F;a aktarma arac&#x131;ndan i&#xE7;eri&#x11F;i i&#xE7;e aktarmak i&#xE7;in bir yol sa&#x11F;lar.</p>
+<blockquote>
+<p>[!DANGER|style:flat]
+Tam &#xF6;l&#xE7;ekli i&#xE7;e aktar&#x131;mlar i&#xE7;in mongoimport ve mongoexport&apos;u kullanmay&#x131;n, &#xE7;&#xFC;nk&#xFC; bunlar veri t&#xFC;r&#xFC; bilgilerini g&#xFC;venilir bir &#x15F;ekilde olu&#x15F;turmayabilir. Bu t&#xFC;r i&#x15F;levsellik i&#xE7;in mongodump ve mongorestore&apos;u kullan&#x131;n.</p>
+</blockquote>
+
                         
                     </section>
                     
@@ -438,7 +481,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MongoDB Restore","description":"MongoDB Restore","level":"1.13","depth":1,"next":{"title":"MongoDB Replica Set","level":"1.14","depth":1,"path":"MongoDB-Replica.md","ref":"MongoDB-Replica.md","articles":[]},"previous":{"title":"MongoDB Back-Up","level":"1.12","depth":1,"path":"MongoDB-BackUp.md","ref":"MongoDB-BackUp.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{"themeHqbook":{"nav":[{"url":"http://ozgurentegrasyon.com/","target":"_blank","name":"Özgür Entegrasyon"}]}},"plugins":["sitemap","rss","yametrika","gtm","canonical-link","theme-hqbook","head-append","flexible-alerts"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"head-append":{"code":["<!-- Global site tag (gtag.js) - Google Analytics Elvan -->","<SCRIPTTAG async src=\"https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662\"></SCRIPTTAG>","<SCRIPTTAG>","  window.dataLayer = window.dataLayer || [];","  function gtag(){dataLayer.push(arguments);}","  gtag('js', new Date());","","   gtag('config', 'G-6LSR50Y662');","</SCRIPTTAG>"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"theme-hqbook":{"favicon":"gitbook/images/favicon.ico","logo":"gitbook/images/logo/logo.png","search-placeholder":"Type to Search","copyButtons":true,"copyLines":true,"dragSplitter":true,"flexible-linkcard":{"title":"Converts blockquotes into beautiful linkcard, custom nice links","target":"_blank","hrefUrl":"../../demo/demo.html","imgSrc":"../../images/home/logo.png","imgClass":""},"hide-elements":[".summary .gitbook-link"]},"flexible-alerts":{"style":"callout","note":{"label":"NOT","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"İpucu","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Uyarı","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Dikkat","icon":"fa fa-ban","className":"danger"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MongoDB-Restore.md","mtime":"2021-07-16T14:57:45.061Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-16T15:49:31.747Z"},"basePath":".","book":{"language":""}})
+            gitbook.page.hasChanged({"page":{"title":"MongoDB Restore","description":"MongoDB Restore","level":"1.13","depth":1,"next":{"title":"MongoDB Replica Set","level":"1.14","depth":1,"path":"MongoDB-Replica.md","ref":"MongoDB-Replica.md","articles":[]},"previous":{"title":"MongoDB Back-Up","level":"1.12","depth":1,"path":"MongoDB-BackUp.md","ref":"MongoDB-BackUp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"themeHqbook":{"nav":[{"url":"http://ozgurentegrasyon.com/","target":"_blank","name":"Özgür Entegrasyon"}]}},"plugins":["sitemap","rss","yametrika","gtm","canonical-link","theme-hqbook","head-append","flexible-alerts"],"pluginsConfig":{"gtm":{"token":"GTM-K4LTD9P"},"yametrika":{"id":82390285,"webvisor":true,"clickmap":true,"trackLinks":true,"accurateTrackBounce":true,"trackHash":true,"ut":"noindex"},"head-append":{"code":["<!-- Global site tag (gtag.js) - Google Analytics Elvan -->","<SCRIPTTAG async src=\"https://www.googletagmanager.com/gtag/js?id=G-6LSR50Y662\"></SCRIPTTAG>","<SCRIPTTAG>","  window.dataLayer = window.dataLayer || [];","  function gtag(){dataLayer.push(arguments);}","  gtag('js', new Date());","","   gtag('config', 'G-6LSR50Y662');","</SCRIPTTAG>"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["MongoDB","Tutorial","Training"],"title":"Özgür Entegrasyon | MongoDB Tutorial","description":"MongoDB Training Documents","author":"Özgür Mersin","site_url":"https://oentegrasyon.github.io/TrainingMongoDB/","feed_url":"https://oentegrasyon.github.io/TrainingMongoDB/feed.xml","managingEditor":"huseyinlutin@gmail.com (Hüseyin Lutin)","webMaster":"bilselergun@gmail.com (Ergün Elvan Bilsel)"},"canonical-link":{"baseURL":"https://oentegrasyon.github.io/TrainingMongoDB"},"highlight":{},"sitemap":{"hostname":"https://oentegrasyon.github.io/TrainingMongoDB/"},"theme-hqbook":{"favicon":"gitbook/images/favicon.ico","logo":"gitbook/images/logo/logo.png","search-placeholder":"Type to Search","copyButtons":true,"copyLines":true,"dragSplitter":true,"flexible-linkcard":{"title":"Converts blockquotes into beautiful linkcard, custom nice links","target":"_blank","hrefUrl":"../../demo/demo.html","imgSrc":"../../images/home/logo.png","imgClass":""},"hide-elements":[".summary .gitbook-link"]},"flexible-alerts":{"style":"callout","note":{"label":"NOT","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"İpucu","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Uyarı","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Dikkat","icon":"fa fa-ban","className":"danger"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MongoDB-Restore.md","mtime":"2021-07-17T15:01:24.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-17T15:07:31.013Z"},"basePath":".","book":{"language":""}})
         });
     </script>
 </div>

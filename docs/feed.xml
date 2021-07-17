@@ -4,7 +4,7 @@
         <description><![CDATA[MongoDB Training Documents]]></description>
         <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 16 Jul 2021 15:49:34 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jul 2021 15:07:35 GMT</lastBuildDate>
         <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Özgür Mersin]]></author>
         <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
@@ -104,13 +104,17 @@
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[No title]]></title>
+            <title><![CDATA[Dump]]></title>
+            <description><![CDATA[MongoDB'de veritabanının yedeğini oluşturmak için mongodump komutunu kullanmalısınız.
+Bu komut, sunucunuzun tüm verilerini döküm dizinine dökecektir.
+Veri miktarını sınırlayabileceğiniz veya uzak sunucunuzun yedeğini oluşturabileceğiniz birçok seçenek vardır.]]></description>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-BackUp.html</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-BackUp.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[No title]]></title>
+            <title><![CDATA[Restore]]></title>
+            <description><![CDATA[Yedekleme verilerini geri yüklemek için MongoDB'nin mongorestore komutu kullanılır. Bu komut, yedekleme dizinindeki tüm verileri geri yükler.]]></description>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Restore.html</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Restore.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
@@ -119,6 +123,13 @@
             <title><![CDATA[No title]]></title>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Operation not permitted]]></title>
+            <description><![CDATA[Hatalar ve çözümlerin tutulduğu bir sayfa]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/Notlar.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/Notlar.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
     </channel>
