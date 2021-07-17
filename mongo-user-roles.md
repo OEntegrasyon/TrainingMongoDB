@@ -1,9 +1,6 @@
 ---
 title: MongoDB training with Özgür Entegrasyon
-description: Roles
-description: MongoDB Eğitim
-description: MongoDB CRUD | MongoDB Backup | MongoDB Restore | MongoDB Replica Set
-description: Özgür Entegrasyon | www.ozgurentegrasyon.com
+description: MongoDB Eğitim | MongoDB CRUD | MongoDB Backup | MongoDB Restore | MongoDB Replica Set | Özgür Entegrasyon | www.ozgurentegrasyon.com
 author: Ergün Elvan Bilsel
 comment: MongoDB eğitimi için gitbook ile hazırlanmış bir web sayfası. A gitbook web page for MongoDB Training.
 ---
