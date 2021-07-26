@@ -4,7 +4,7 @@
         <description><![CDATA[MongoDB Training Documents]]></description>
         <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 17 Jul 2021 15:58:52 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 26 Jul 2021 12:29:21 GMT</lastBuildDate>
         <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Özgür Mersin]]></author>
         <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
@@ -126,6 +126,13 @@ Replica Set en az üç düğüme sahip olabilir.
 Bir replika setindeki bu çoklu düğümler farklı roller oynar ve hepsi birlikte tek bir replika seti oluşturur.]]></description>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</guid>
+            <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Örnek Kurulum]]></title>
+            <description><![CDATA[MongoDB Replica Set veri tabanının yedekli olmasını sağlar; bu sayede donanım arızası veya hizmet kesintilerinden dolayı  aksaklıklardan kurtulmanıza olanak sağlar.]]></description>
+            <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica-Install.html</link>
+            <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica-Install.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
         <item>

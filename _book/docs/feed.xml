@@ -4,7 +4,7 @@
         <description><![CDATA[MongoDB Training Documents]]></description>
         <link>https://oentegrasyon.github.io/TrainingMongoDB/</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 17 Jul 2021 15:07:35 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jul 2021 15:58:52 GMT</lastBuildDate>
         <atom:link href="https://oentegrasyon.github.io/TrainingMongoDB/feed.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Özgür Mersin]]></author>
         <managingEditor><![CDATA[huseyinlutin@gmail.com (Hüseyin Lutin)]]></managingEditor>
@@ -120,7 +120,10 @@ Veri miktarını sınırlayabileceğiniz veya uzak sunucunuzun yedeğini oluştu
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[No title]]></title>
+            <title><![CDATA[Replica]]></title>
+            <description><![CDATA[Replica Set, temelde aynı veri kümesini koruyan birden çok sunucu üzerinde çalışan birden çok mongod işlemidir.
+Replica Set en az üç düğüme sahip olabilir.
+Bir replika setindeki bu çoklu düğümler farklı roller oynar ve hepsi birlikte tek bir replika seti oluşturur.]]></description>
             <link>https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</link>
             <guid isPermaLink="true">https://oentegrasyon.github.io/TrainingMongoDB/MongoDB-Replica.html</guid>
             <dc:creator><![CDATA[Özgür Mersin]]></dc:creator>

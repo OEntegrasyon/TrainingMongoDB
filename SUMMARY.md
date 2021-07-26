@@ -14,6 +14,7 @@
 * [MongoDB Back-Up](MongoDB-BackUp.md)
 * [MongoDB Restore](MongoDB-Restore.md)
 * [MongoDB Replica Set](MongoDB-Replica.md)
+* [MongoDB Replica Set Install](MongoDB-Replica-Install.md)
 * [Solution Notes](Notlar.md)
 
 
