@@ -41,7 +41,7 @@ Verileri depolayan üç üyeli bir replica kümesi şunları içerir:
 
 Bu  replica set , ek hata toleransı ve yüksek kullanılabilirlik sağlar. Primary kullanılamıyorsa,  replica set Secondary olanı Primary olarak seçer ve normal çalışmaya devam eder. Eski primary, uygun olduğunda kümeye yeniden katılır.
 
-![](gitbook/images/assets/replicaerr.svg)
+![](gitbook/images/assets/replicaerr.png)
 
 ## Primary with a Secondary and an Arbiter (PSA)
 
