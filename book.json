@@ -7,7 +7,8 @@
 				"canonical-link",
 				"theme-hqbook",
 				"head-append",
-				"flexible-alerts"
+				"flexible-alerts",
+				"myseo"
 				],
 	"variables": {
 					"themeHqbook":{
@@ -93,7 +94,13 @@
 		  },
 		  "robots-txt": {
             "path": "robots.txt"
-        }
+        },
+		"myseo":{
+			"titlePrefix": "Özgür Entegrasyon | MongoDB",
+			"titleSuffix": "Mongodb Eğitimleri. Alanında uzman eğitmencilerle , sanal ortamda eğitimlerimize dilediğiniz yerden katılabilirsiniz.",
+			"description": "MongoDB Eğitimi CRUD işlemleri, şema tasarımı, veri modelleme, ölçeklenebilirlik vb. NoSQL ve MongoDB alanında olan konuları kapsamaktadır",
+			"keywords": "MongoDB,NoSQL,CRUD,Index,JS"
+		}
 
 		
 	}

@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: 
-
-Sitemap: https://oentegrasyon.github.io/TrainingMongoDB/sitemap.xml
