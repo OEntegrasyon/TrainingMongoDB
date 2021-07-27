@@ -7,9 +7,7 @@
 				"canonical-link",
 				"theme-hqbook",
 				"head-append",
-				"flexible-alerts",
-				"web-header",
-				"bsz"
+				"flexible-alerts"
 				],
 	"variables": {
 					"themeHqbook":{
@@ -95,14 +93,7 @@
 		  },
 		  "robots-txt": {
             "path": "robots.txt"
-        },
-		"webheader": {
-			"headerTitle" : "Özgür Enregrasyon | MongoDB Eğitim"
-		},
-		"bsz": {
-			"copyright": "[Ergün Elvan Bilsel](https://github.com/erelbi)",
-			"markdown": true
-		  }
+        }
 
 		
 	}
