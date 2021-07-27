@@ -7,7 +7,8 @@
 				"canonical-link",
 				"theme-hqbook",
 				"head-append",
-				"flexible-alerts"
+				"flexible-alerts",
+				"tbfed-pagefooter"
 				],
 	"variables": {
 					"themeHqbook":{
@@ -99,7 +100,7 @@
     "Author": "Ergün Elvan Bilsel",
 	"language": "tr-TR",
 	"tbfed-pagefooter": {
-		"copyright":"&Prepared for "Özgür Entegrasyon" by ergün elvan bilsel",
+		"copyright":"&Prepared for Özgür Entegrasyon by ergün elvan bilsel",
 		"modify_label": "Belge revizyon：",
 		"modify_format": "YYYY-MM-DD HH:mm:ss"
 	  }
