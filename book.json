@@ -93,7 +93,12 @@
 		  },
 		  "robots-txt": {
             "path": "robots.txt"
-        }
+        },
+		"Title": "Özgür Entegrasyon",
+    "Description": "MongoDB eğitimi",
+    "Author": "Ergün Elvan Bilsel",
+	"language": "tr-TR"
+
 
 		
 	}
