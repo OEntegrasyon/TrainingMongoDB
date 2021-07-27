@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@tugboatqa/gitbook-plugin-robots-txt": "^1.0.0",
+    "ebook-convert": "^2.0.1",
     "gitbook-plugin-add-js-css": "^0.0.1",
     "gitbook-plugin-analytics": "^0.2.1",
     "gitbook-plugin-bsz": "^0.0.6",
