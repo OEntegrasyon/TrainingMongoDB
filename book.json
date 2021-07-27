@@ -102,7 +102,7 @@
 	"language": "tr-TR",
 	"tbfed-pagefooter": {
 		"copyright":"Prepared for Özgür Entegrasyon by ergün elvan bilsel",
-		"modify_label": " & Belge revizyon：",
+		"modify_label": " & Revision Time：",
 		"modify_format": "YYYY-MM-DD HH:mm:ss"
 	  },
 	  "get-book": {
