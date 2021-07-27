@@ -48,7 +48,7 @@ Bu  replica set , ek hata toleransı ve yüksek kullanılabilirlik sağlar. Prim
 Verileri depolayan iki üyeli üç üyeli bir çoğaltma kümesi şunları içerir:
     * Bir Primary. Bir Secondary üye. Secondary, seçim ile primary olabilir. Bir arbiter. Arbiter sadece seçimlerde oy kullanır.
 
-![](gitbook/images/assets/psa.svg)
+![](gitbook/images/assets/psa.png)
 
 
 
