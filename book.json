@@ -8,7 +8,8 @@
 				"theme-hqbook",
 				"head-append",
 				"flexible-alerts",
-				"myseo"
+				"web-header",
+				"bsz"
 				],
 	"variables": {
 					"themeHqbook":{
@@ -95,12 +96,13 @@
 		  "robots-txt": {
             "path": "robots.txt"
         },
-		"myseo":{
-			"titlePrefix": "Özgür Entegrasyon | MongoDB",
-			"titleSuffix": "Mongodb Eğitimleri. Alanında uzman eğitmencilerle , sanal ortamda eğitimlerimize dilediğiniz yerden katılabilirsiniz.",
-			"description": "MongoDB Eğitimi CRUD işlemleri, şema tasarımı, veri modelleme, ölçeklenebilirlik vb. NoSQL ve MongoDB alanında olan konuları kapsamaktadır",
-			"keywords": "MongoDB,NoSQL,CRUD,Index,JS"
-		}
+		"webheader": {
+			"headerTitle" : "Özgür Enregrasyon | MongoDB Eğitim"
+		},
+		"bsz": {
+			"copyright": "[Ergün Elvan Bilsel](https://github.com/erelbi)",
+			"markdown": true
+		  }
 
 		
 	}
